@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>À propos – Cabinet Dentaire Mek’s</title>
+  <meta name="description" content="Découvrez l’histoire, l’équipe et les valeurs du Cabinet Dentaire Mek’s à Douala et Yaoundé. Soins dentaires professionnels et humains." />
+  <link rel="icon" href="assets/img/logo.png" />
+  <!-- Poppins font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome 6 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            azur: '#0c598f',
+            mauve: '#30263c',
+            magenta: '#d47ead',
+          },
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <!-- Swiper.js CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-mauve font-poppins">
+  <!-- HEADER -->
+  <header class="bg-azur text-white shadow-md">
+    <div class="container mx-auto flex justify-between items-center py-4 px-4">
+      <div class="flex items-center gap-2">
+        <img src="assets/img/logo.png" alt="Logo Cabinet Mek’s" class="h-10 w-10 object-contain" />
+        <span class="font-bold text-lg">Cabinet Dentaire Mek’s</span>
+      </div>
+      <nav class="hidden md:flex gap-6 text-base">
+        <a href="index.html" class="hover:text-magenta transition">Accueil</a>
+        <a href="services.html" class="hover:text-magenta transition">Nos services</a>
+        <a href="a-propos.html" class="hover:text-magenta transition font-bold underline">À propos</a>
+        <a href="gallery.html" class="hover:text-magenta transition">Galerie</a>
+        <a href="contact.html" class="hover:text-magenta transition">Contact</a>
+      </nav>
+      <a href="contact.html" class="md:block hidden bg-magenta text-white px-4 py-2 rounded-lg font-semibold hover:bg-azur transition">Prendre rendez-vous</a>
+      <button class="md:hidden flex items-center" id="menu-toggle" aria-label="Ouvrir le menu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-7 h-7">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <!-- Menu mobile -->
+    <div id="mobile-menu" class="md:hidden hidden bg-azur">
+      <nav class="flex flex-col gap-4 py-4 px-4">
+        <a href="index.html" class="hover:text-magenta transition">Accueil</a>
+        <a href="services.html" class="hover:text-magenta transition">Nos services</a>
+        <a href="a-propos.html" class="hover:text-magenta transition font-bold underline">À propos</a>
+        <a href="gallery.html" class="hover:text-magenta transition">Galerie</a>
+        <a href="contact.html" class="hover:text-magenta transition">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO / Présentation -->
+  <section class="bg-gray-50 py-16" data-aos="fade-up">
+    <div class="container mx-auto px-4 flex flex-col items-center text-center" data-aos="fade-up">
+      <h1 class="text-3xl md:text-4xl font-bold text-azur mb-4 flex items-center justify-center"><i class="fa-solid fa-book-open mr-3 text-magenta"></i>Notre histoire</h1>
+      <p class="mb-4 text-mauve text-lg font-medium">Une aventure humaine dédiée à votre sourire, de la fondation à aujourd’hui.</p>
+      <ol class="relative border-l-4 border-magenta mb-8 flex flex-col items-center w-full max-w-md mx-auto">
+        <li class="mb-10 ml-8 w-full">
+          <span class="absolute -left-6 flex items-center justify-center w-12 h-12 bg-magenta rounded-full text-white shadow-lg"><i class="fa-solid fa-seedling text-2xl"></i></span>
+          <h3 class="font-semibold text-azur text-lg mb-1">Création du cabinet (2010)</h3>
+          <p class="text-sm text-mauve">Ouverture du Cabinet Mek’s avec la volonté de démocratiser l’accès à des soins dentaires de qualité.</p>
+        </li>
+        <li class="mb-10 ml-8 w-full">
+          <span class="absolute -left-6 flex items-center justify-center w-12 h-12 bg-magenta rounded-full text-white shadow-lg"><i class="fa-solid fa-user-group text-2xl"></i></span>
+          <h3 class="font-semibold text-azur text-lg mb-1">Équipe & expertise</h3>
+          <p class="text-sm text-mauve">Renforcement de l’équipe pluridisciplinaire et développement de nouvelles spécialités pour mieux accompagner chaque patient.</p>
+        </li>
+        <li class="mb-10 ml-8 w-full">
+          <span class="absolute -left-6 flex items-center justify-center w-12 h-12 bg-magenta rounded-full text-white shadow-lg"><i class="fa-solid fa-flask text-2xl"></i></span>
+          <h3 class="font-semibold text-azur text-lg mb-1">Innovation continue</h3>
+          <p class="text-sm text-mauve">Intégration de technologies de pointe et formation continue pour garantir sécurité, confort et résultats.</p>
+        </li>
+        <li class="ml-8 w-full">
+          <span class="absolute -left-6 flex items-center justify-center w-12 h-12 bg-magenta rounded-full text-white shadow-lg"><i class="fa-solid fa-heart text-2xl"></i></span>
+          <h3 class="font-semibold text-azur text-lg mb-1">Relation humaine</h3>
+          <p class="text-sm text-mauve">Chaque sourire compte : notre priorité reste l’écoute, la pédagogie et la confiance avec nos patients.</p>
+        </li>
+      </ol>
+      <a href="contact.html" class="inline-block bg-magenta text-white px-6 py-3 rounded-lg font-semibold hover:bg-azur transition">Prendre rendez-vous</a>
+    </div>
+  </section>
+
+
+  <!-- Bloc valeurs & engagements -->
+  <section class="py-16 bg-gray-50" data-aos="fade-up">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <h2 class="text-2xl md:text-3xl font-bold text-azur mb-10 text-center">Nos valeurs & engagements</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="flex flex-col items-center text-center p-6 rounded-lg shadow bg-white" data-aos="zoom-in" data-aos-delay="100">
+          <span class="text-5xl text-magenta mb-4"><i class="fa-solid fa-hand-holding-heart"></i></span>
+          <h3 class="font-semibold mb-2">Bienveillance</h3>
+          <p class="text-sm">Chaque patient est accueilli avec respect, écoute et empathie.</p>
+        </div>
+        <div class="flex flex-col items-center text-center p-6 rounded-lg shadow bg-white" data-aos="zoom-in" data-aos-delay="200">
+          <span class="text-5xl text-magenta mb-4"><i class="fa-solid fa-lightbulb"></i></span>
+          <h3 class="font-semibold mb-2">Innovation</h3>
+          <p class="text-sm">Nous utilisons des techniques et équipements de pointe pour garantir la qualité et la sécurité des soins.</p>
+        </div>
+        <div class="flex flex-col items-center text-center p-6 rounded-lg shadow bg-white" data-aos="zoom-in" data-aos-delay="300">
+          <span class="text-5xl text-magenta mb-4"><i class="fa-solid fa-people-group"></i></span>
+          <h3 class="font-semibold mb-2">Pédagogie</h3>
+          <p class="text-sm">Nous expliquons chaque étape des soins et accompagnons nos patients dans la prévention.</p>
+        </div>
+        <div class="flex flex-col items-center text-center p-6 rounded-lg shadow bg-white" data-aos="zoom-in" data-aos-delay="400">
+          <span class="text-5xl text-magenta mb-4"><i class="fa-solid fa-scale-balanced"></i></span>
+          <h3 class="font-semibold mb-2">Transparence</h3>
+          <p class="text-sm">Nous communiquons clairement sur les soins, les tarifs et les alternatives, pour instaurer une relation de confiance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Notre mission -->
+  <section class="py-16" data-aos="fade-up">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-azur mb-10 text-center flex items-center justify-center"><i class="fa-solid fa-bullseye mr-3 text-magenta"></i>Notre mission</h2>
+      <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+        <div class="md:w-2/5 h-96 flex items-center justify-center mb-8 md:mb-0" data-aos="fade-right">
+          <img src="Galerie/Patient (1).jpg" alt="Notre mission" class="rounded-xl shadow-lg h-full w-full object-cover" style="min-height:16rem;" onerror="this.style.display='none'" />
+        </div>
+        <div class="md:w-2/5 h-96 flex items-center justify-center" data-aos="fade-left">
+          <div class="bg-white rounded-xl shadow-lg p-8 h-full w-full flex items-center">
+            <p class="mb-0 text-lg">Notre mission est de rendre la santé bucco-dentaire accessible à tous, dans un environnement de confiance, d’écoute et d’innovation. Nous croyons que chaque sourire a le droit d’être rayonnant, et nous nous engageons à accompagner nos patients à chaque étape, avec pédagogie et bienveillance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="bg-mauve text-white mt-12 py-8">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-4">
+      <div>
+        <img src="Galerie/Logo.png" alt="Logo Mek’s" class="h-30 mb-2" />
+        <p class="text-sm">Des soins dentaires sûrs, accessibles et professionnels.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Liens rapides</h4>
+        <ul class="text-sm space-y-1">
+          <li><a href="index.html" class="hover:text-magenta">Accueil</a></li>
+          <li><a href="services.html" class="hover:text-magenta">Nos services</a></li>
+          <li><a href="a-propos.html" class="hover:text-magenta font-bold underline">À propos</a></li>
+          <li><a href="gallery.html" class="hover:text-magenta">Galerie</a></li>
+          <li><a href="contact.html" class="hover:text-magenta">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Contact</h4>
+        <ul class="text-sm space-y-1">
+          <li><i class="fa-solid fa-location-dot mr-2"></i>Douala : Bonapriso</li>
+          <li><i class="fa-solid fa-location-dot mr-2"></i>Yaoundé : Bastos</li>
+          <li><i class="fa-solid fa-phone mr-2"></i>+237 6 99 99 99 99</li>
+          <li><i class="fa-solid fa-envelope mr-2"></i>contact@meksdental.com</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Suivez-nous</h4>
+        <div class="flex gap-4 mt-2">
+          <a href="#" class="hover:text-magenta"><i class="fab fa-facebook fa-lg"></i></a>
+          <a href="#" class="hover:text-magenta"><i class="fab fa-instagram fa-lg"></i></a>
+          <a href="#" class="hover:text-magenta"><i class="fab fa-linkedin fa-lg"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center text-xs mt-6">&copy; 2025 Cabinet Dentaire Mek’s. Tous droits réservés.</div>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

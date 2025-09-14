@@ -1,0 +1,5 @@
+# Dépendances principales (CDN recommandés, pas d'installation nécessaire)
+TailwindCSS
+Swiper.js
+AOS.css
+Google Fonts (Poppins)

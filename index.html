@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cabinet Dentaire Mek’s – Douala & Yaoundé</title>
+  <meta name="description" content="Cabinet Dentaire Mek’s à Douala et Yaoundé : soins dentaires professionnels, prise de rendez-vous en ligne, équipe expérimentée, accueil chaleureux. Rendez-vous rapide !" />
+  <link rel="icon" href="assets/img/logo.png" />
+  <!-- Poppins font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome 6 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            azur: '#0c598f',
+            mauve: '#30263c',
+            magenta: '#d47ead',
+          },
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <!-- Swiper.js CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-mauve font-poppins">
+  <!-- HEADER -->
+  <header class="bg-azur text-white shadow-md">
+    <div class="container mx-auto flex justify-between items-center py-4 px-4">
+      <div class="flex items-center gap-2">
+        <img src="assets/img/logo.png" alt="Logo Cabinet Mek’s" class="h-10 w-10 object-contain" />
+        <span class="font-bold text-lg">Cabinet Dentaire Mek’s</span>
+      </div>
+      <nav class="hidden md:flex gap-6 text-base">
+        <a href="index.html" class="hover:text-magenta transition">Accueil</a>
+        <a href="services.html" class="hover:text-magenta transition">Nos services</a>
+        <a href="a-propos.html" class="hover:text-magenta transition">À propos</a>
+        <a href="gallery.html" class="hover:text-magenta transition">Galerie</a>
+        <a href="contact.html" class="hover:text-magenta transition">Contact</a>
+      </nav>
+      <a href="contact.html" class="md:block hidden bg-magenta text-white px-4 py-2 rounded-lg font-semibold hover:bg-azur transition">Prendre rendez-vous</a>
+      <button class="md:hidden flex items-center" id="menu-toggle" aria-label="Ouvrir le menu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-7 h-7">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <!-- Menu mobile -->
+    <div id="mobile-menu" class="md:hidden hidden bg-azur text-white px-4 pb-4">
+      <a href="index.html" class="block py-2">Accueil</a>
+      <a href="services.html" class="block py-2">Nos services</a>
+      <a href="a-propos.html" class="block py-2">À propos</a>
+      <a href="gallery.html" class="block py-2">Galerie</a>
+      <a href="contact.html" class="block py-2">Contact</a>
+      <a href="contact.html" class="block py-2 bg-magenta rounded text-center mt-2">Prendre rendez-vous</a>
+    </div>
+  </header>
+  <!-- BANNIERE PRINCIPALE -->
+  <section class="bg-azur text-white py-12 px-4" data-aos="fade-down">
+    <div class="container mx-auto flex flex-col md:flex-row items-center gap-8">
+      <div class="flex-1">
+        <h1 class="text-3xl md:text-5xl font-bold mb-4">Votre sourire, notre priorité à Douala & Yaoundé</h1>
+        <p class="mb-6 text-lg">Des soins dentaires sûrs, accessibles et professionnels.<br>Prise de rendez-vous rapide, équipe expérimentée, accueil humain.</p>
+        <a href="contact.html" class="bg-magenta px-6 py-3 rounded-lg text-white font-semibold hover:bg-white hover:text-azur transition">Prendre rendez-vous</a>
+      </div>
+      <div class="flex-1 flex justify-center">
+        <img src="assets/img/hero-dentiste.png" alt="Dentiste au travail" class="rounded-lg shadow-lg w-full max-w-sm object-cover" />
+      </div>
+    </div>
+  </section>
+  <!-- Pourquoi choisir le cabinet Mek’s -->
+  <section class="py-12 bg-white" data-aos="fade-up">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-azur mb-8 text-center">Pourquoi choisir le Cabinet Dentaire Mek’s ?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="flex flex-col items-center text-center p-6 rounded-lg shadow hover:shadow-lg transition bg-gray-50" data-aos="fade-up" data-aos-delay="100">
+          <span class="text-4xl text-magenta mb-4"><i class="fa-solid fa-user-doctor"></i></span>
+          <h3 class="font-semibold mb-2">Équipe expérimentée</h3>
+          <p class="text-sm">Des chirurgiens-dentistes qualifiés, passionnés et à l’écoute de chaque patient.</p>
+        </div>
+        <div class="flex flex-col items-center text-center p-6 rounded-lg shadow hover:shadow-lg transition bg-gray-50" data-aos="fade-up" data-aos-delay="200">
+          <span class="text-4xl text-magenta mb-4"><i class="fa-solid fa-shield-heart"></i></span>
+          <h3 class="font-semibold mb-2">Soins sécurisés</h3>
+          <p class="text-sm">Hygiène stricte, équipements modernes et protocoles internationaux pour votre sécurité.</p>
+        </div>
+        <div class="flex flex-col items-center text-center p-6 rounded-lg shadow hover:shadow-lg transition bg-gray-50" data-aos="fade-up" data-aos-delay="300">
+          <span class="text-4xl text-magenta mb-4"><i class="fa-solid fa-smile-beam"></i></span>
+          <h3 class="font-semibold mb-2">Résultats visibles</h3>
+          <p class="text-sm">Des centaines de patients satisfaits, des sourires transformés et durables.</p>
+        </div>
+        <div class="flex flex-col items-center text-center p-6 rounded-lg shadow hover:shadow-lg transition bg-gray-50" data-aos="fade-up" data-aos-delay="400">
+          <span class="text-4xl text-magenta mb-4"><i class="fa-solid fa-calendar-check"></i></span>
+          <h3 class="font-semibold mb-2">Prise de rendez-vous facile</h3>
+          <p class="text-sm">Réservez en ligne ou par WhatsApp, avec disponibilité rapide à Douala et Yaoundé.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Chiffres clés -->
+  <section class="py-12 bg-gray-50" data-aos="fade-up">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-azur mb-8 text-center">Nos chiffres clés</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="100">
+          <span class="text-4xl text-magenta mb-2"><i class="fa-solid fa-users"></i></span>
+          <span class="text-2xl font-bold countup" data-count="1200">0</span>
+          <span class="text-sm text-mauve">Patients satisfaits</span>
+        </div>
+        <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="200">
+          <span class="text-4xl text-magenta mb-2"><i class="fa-solid fa-calendar-check"></i></span>
+          <span class="text-2xl font-bold countup" data-count="10">0</span>
+          <span class="text-sm text-mauve">Années d’expérience</span>
+        </div>
+        <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="300">
+          <span class="text-4xl text-magenta mb-2"><i class="fa-solid fa-location-dot"></i></span>
+          <span class="text-2xl font-bold countup" data-count="2">0</span>
+          <span class="text-sm text-mauve">Cabinets (Douala & Yaoundé)</span>
+        </div>
+        <div class="flex flex-col items-center p-6 bg-white rounded-lg shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="400">
+          <span class="text-4xl text-magenta mb-2"><i class="fa-solid fa-tooth"></i></span>
+          <span class="text-2xl font-bold countup" data-count="15">0</span>
+          <span class="text-sm text-mauve">Services dentaires</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Nos services phares -->
+  <section class="py-12 bg-white" data-aos="fade-up">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-azur mb-8 text-center">Nos services phares</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div class="flex flex-col items-center text-center p-6 rounded-lg shadow hover:shadow-lg transition bg-gray-50" data-aos="zoom-in" data-aos-delay="100">
+          <span class="text-4xl text-magenta mb-4"><i class="fa-solid fa-tooth"></i></span>
+          <h3 class="font-semibold mb-2">Détartrage & Prévention</h3>
+          <p class="text-sm">Nettoyage professionnel, prévention des caries et conseils personnalisés.</p>
+        </div>
+        <div class="flex flex-col items-center text-center p-6 rounded-lg shadow hover:shadow-lg transition bg-gray-50" data-aos="zoom-in" data-aos-delay="200">
+          <span class="text-4xl text-magenta mb-4"><i class="fa-solid fa-teeth"></i></span>
+          <h3 class="font-semibold mb-2">Orthodontie</h3>
+          <p class="text-sm">Gouttières invisibles, appareils traditionnels, orthodontie précoce et contention.</p>
+        </div>
+        <div class="flex flex-col items-center text-center p-6 rounded-lg shadow hover:shadow-lg transition bg-gray-50" data-aos="zoom-in" data-aos-delay="300">
+          <span class="text-4xl text-magenta mb-4"><i class="fa-solid fa-user-injured"></i></span>
+          <h3 class="font-semibold mb-2">Chirurgie dentaire</h3>
+          <p class="text-sm">Extractions, implantologie, traitement des gencives, prothèses fixes et amovibles.</p>
+        </div>
+        <div class="flex flex-col items-center text-center p-6 rounded-lg shadow hover:shadow-lg transition bg-gray-50" data-aos="zoom-in" data-aos-delay="400">
+          <span class="text-4xl text-magenta mb-4"><i class="fa-solid fa-star"></i></span>
+          <h3 class="font-semibold mb-2">Esthétique & Blanchiment</h3>
+          <p class="text-sm">Blanchiment professionnel, polissage, soins esthétiques composites et couronnes.</p>
+        </div>
+      </div>
+      <div class="flex justify-center">
+        <a href="services.html" class="bg-magenta text-white px-6 py-3 rounded-lg font-semibold hover:bg-azur transition shadow-lg">Voir tous nos services</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Témoignages -->
+  <section class="py-12 bg-gray-50" data-aos="fade-up">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-azur mb-8 text-center">Ils nous font confiance</h2>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <!-- Témoignage 1 -->
+          <div class="swiper-slide flex flex-col items-center bg-white rounded-lg shadow p-6 mx-2">
+            <span class="text-5xl text-magenta mb-2"><i class="fa-solid fa-user-circle"></i></span>
+            <p class="italic text-mauve mb-4">“Accueil chaleureux, soins professionnels et résultats visibles dès la première visite. Je recommande vivement !”</p>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="font-semibold">Amina D.</span>
+              <span class="text-yellow-400">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </span>
+            </div>
+            <span class="text-xs text-gray-400">Douala</span>
+          </div>
+          <!-- Témoignage 2 -->
+          <div class="swiper-slide flex flex-col items-center bg-white rounded-lg shadow p-6 mx-2">
+            <span class="text-5xl text-magenta mb-2"><i class="fa-solid fa-user-circle"></i></span>
+            <p class="italic text-mauve mb-4">“Le service est rapide, les dentistes sont très rassurants et expliquent chaque étape. Cabinet au top.”</p>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="font-semibold">Jean-Paul M.</span>
+              <span class="text-yellow-400">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </span>
+            </div>
+            <span class="text-xs text-gray-400">Yaoundé</span>
+          </div>
+          <!-- Témoignage 3 -->
+          <div class="swiper-slide flex flex-col items-center bg-white rounded-lg shadow p-6 mx-2">
+            <span class="text-5xl text-magenta mb-2"><i class="fa-solid fa-user-circle"></i></span>
+            <p class="italic text-mauve mb-4">“J’avais peur du dentiste, mais ici j’ai trouvé une équipe à l’écoute et très douce. Merci !”</p>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="font-semibold">Chantal E.</span>
+              <span class="text-yellow-400">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </div>
+            <span class="text-xs text-gray-400">Douala</span>
+          </div>
+          <!-- Témoignage 4 -->
+          <div class="swiper-slide flex flex-col items-center bg-white rounded-lg shadow p-6 mx-2">
+            <span class="text-5xl text-magenta mb-2"><i class="fa-solid fa-user-nurse"></i></span>
+            <p class="italic text-mauve mb-4">“Très bon cabinet : hygiène impeccable, matériel moderne et personnel très rassurant.”</p>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="font-semibold">Boris K.</span>
+              <span class="text-yellow-400">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </span>
+            </div>
+            <span class="text-xs text-gray-400">Yaoundé</span>
+          </div>
+          <!-- Témoignage 5 -->
+          <div class="swiper-slide flex flex-col items-center bg-white rounded-lg shadow p-6 mx-2">
+            <span class="text-5xl text-magenta mb-2"><i class="fa-solid fa-user-graduate"></i></span>
+            <p class="italic text-mauve mb-4">“J’ai retrouvé confiance en mon sourire grâce au blanchiment ! Merci au Dr Meki et à toute l’équipe.”</p>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="font-semibold">Linda F.</span>
+              <span class="text-yellow-400">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </span>
+            </div>
+            <span class="text-xs text-gray-400">Douala</span>
+          </div>
+          <!-- Témoignage 6 -->
+          <div class="swiper-slide flex flex-col items-center bg-white rounded-lg shadow p-6 mx-2">
+            <span class="text-5xl text-magenta mb-2"><i class="fa-solid fa-user"></i></span>
+            <p class="italic text-mauve mb-4">“Prise de rendez-vous très facile, horaires respectés et conseils personnalisés. Je recommande !”</p>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="font-semibold">Eric N.</span>
+              <span class="text-yellow-400">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </div>
+            <span class="text-xs text-gray-400">Douala</span>
+          </div>
+          <!-- Témoignage 7 -->
+          <div class="swiper-slide flex flex-col items-center bg-white rounded-lg shadow p-6 mx-2">
+            <span class="text-5xl text-magenta mb-2"><i class="fa-solid fa-user-tie"></i></span>
+            <p class="italic text-mauve mb-4">“Ma fille a bénéficié d’un appareil orthodontique : le suivi est excellent et l’équipe très pédagogue.”</p>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="font-semibold">Fatou M.</span>
+              <span class="text-yellow-400">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </span>
+            </div>
+            <span class="text-xs text-gray-400">Yaoundé</span>
+          </div>
+          <!-- Témoignage 8 -->
+          <div class="swiper-slide flex flex-col items-center bg-white rounded-lg shadow p-6 mx-2">
+            <span class="text-5xl text-magenta mb-2"><i class="fa-solid fa-user-astronaut"></i></span>
+            <p class="italic text-mauve mb-4">“Très bon accueil, cabinet moderne, résultats rapides. Je recommande à tous mes proches.”</p>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="font-semibold">Samuel T.</span>
+              <span class="text-yellow-400">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </span>
+            </div>
+            <span class="text-xs text-gray-400">Douala</span>
+          </div>
+        </div>
+        <!-- Pagination -->
+        <div class="swiper-pagination mt-4"></div>
+        <!-- Navigation -->
+        <div class="swiper-button-next text-magenta"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-12 bg-white" data-aos="fade-up">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <h2 class="text-2xl md:text-3xl font-bold text-azur mb-8 text-center">Questions fréquentes</h2>
+      <div id="faq-accordion">
+        <!-- Question 1 -->
+        <div class="mb-4 border-b border-gray-200">
+          <button type="button" class="w-full flex items-center justify-between py-4 text-left focus:outline-none faq-toggle">
+            <span><i class="fa-solid fa-calendar-check mr-2 text-magenta"></i>Comment prendre rendez-vous&nbsp;?</span>
+            <i class="fa-solid fa-chevron-down text-azur transition-transform duration-200"></i>
+          </button>
+          <div class="faq-content hidden pb-4 pl-8 pr-2 text-mauve">Vous pouvez prendre rendez-vous en ligne via notre formulaire, par téléphone ou directement à l’accueil de l’un de nos cabinets.</div>
+        </div>
+        <!-- Question 2 -->
+        <div class="mb-4 border-b border-gray-200">
+          <button type="button" class="w-full flex items-center justify-between py-4 text-left focus:outline-none faq-toggle">
+            <span><i class="fa-solid fa-tooth mr-2 text-magenta"></i>Quels types de soins proposez-vous&nbsp;?</span>
+            <i class="fa-solid fa-chevron-down text-azur transition-transform duration-200"></i>
+          </button>
+          <div class="faq-content hidden pb-4 pl-8 pr-2 text-mauve">Nous proposons tous les soins dentaires courants : prévention, orthodontie, chirurgie, esthétique, implants, blanchiment, etc.</div>
+        </div>
+        <!-- Question 3 -->
+        <div class="mb-4 border-b border-gray-200">
+          <button type="button" class="w-full flex items-center justify-between py-4 text-left focus:outline-none faq-toggle">
+            <span><i class="fa-solid fa-shield-heart mr-2 text-magenta"></i>Est-ce que les soins sont douloureux&nbsp;?</span>
+            <i class="fa-solid fa-chevron-down text-azur transition-transform duration-200"></i>
+          </button>
+          <div class="faq-content hidden pb-4 pl-8 pr-2 text-mauve">Nous mettons tout en œuvre pour garantir des soins indolores grâce à l’anesthésie moderne et à une approche rassurante.</div>
+        </div>
+        <!-- Question 4 -->
+        <div class="mb-4 border-b border-gray-200">
+          <button type="button" class="w-full flex items-center justify-between py-4 text-left focus:outline-none faq-toggle">
+            <span><i class="fa-solid fa-user-doctor mr-2 text-magenta"></i>Qui va s’occuper de moi&nbsp;?</span>
+            <i class="fa-solid fa-chevron-down text-azur transition-transform duration-200"></i>
+          </button>
+          <div class="faq-content hidden pb-4 pl-8 pr-2 text-mauve">Vous serez pris en charge par des chirurgiens-dentistes diplômés, expérimentés et à l’écoute de vos besoins.</div>
+        </div>
+        <!-- Question 5 -->
+        <div class="mb-4 border-b border-gray-200">
+          <button type="button" class="w-full flex items-center justify-between py-4 text-left focus:outline-none faq-toggle">
+            <span><i class="fa-solid fa-location-dot mr-2 text-magenta"></i>Où sont situés vos cabinets&nbsp;?</span>
+            <i class="fa-solid fa-chevron-down text-azur transition-transform duration-200"></i>
+          </button>
+          <div class="faq-content hidden pb-4 pl-8 pr-2 text-mauve">Nous sommes présents à Douala (Bonapriso) et à Yaoundé (Bastos). Retrouvez toutes les infos sur la page Contact.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-mauve text-white mt-12 py-8">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-4">
+      <div>
+        <img src="assets/img/logo.png" alt="Logo Mek’s" class="h-10 mb-2" />
+        <p class="text-sm">Des soins dentaires sûrs, accessibles et professionnels.</p>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-2">Liens rapides</h3>
+        <ul class="space-y-1">
+          <li><a href="index.html" class="hover:text-magenta">Accueil</a></li>
+          <li><a href="services.html" class="hover:text-magenta">Nos services</a></li>
+          <li><a href="a-propos.html" class="hover:text-magenta">À propos</a></li>
+          <li><a href="contact.html" class="hover:text-magenta">Contact</a></li>
+          <li><a href="gallery.html" class="hover:text-magenta">Galerie</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-2">Contacts</h3>
+        <ul class="space-y-1 text-sm">
+          <li>📧 <a href="mailto:winimeke07@gmail.com" class="hover:text-magenta">winimeke07@gmail.com</a></li>
+          <li>📞 WhatsApp : <a href="tel:+237691560410" class="hover:text-magenta">+237 6 91 56 04 10</a></li>
+          <li>🔗 <a href="https://www.facebook.com/share/198eCfK1wM/?mibextid=wwXIfr" target="_blank" class="hover:text-magenta">Facebook /CabinetMeks</a></li>
+        </ul>
+      </div>
+      <div class="flex flex-col justify-between">
+        <span class="text-xs">© 2025 Cabinet Dentaire Mek’s. Tous droits réservés.</span>
+      </div>
+    </div>
+  </footer>
+  <!-- JS LIBS & MAIN.JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
