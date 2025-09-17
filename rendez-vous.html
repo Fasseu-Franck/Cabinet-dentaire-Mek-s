@@ -9,6 +9,22 @@
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              azur: '#0c598f',
+              mauve: '#30263c',
+              magenta: '#d47ead',
+            },
+            fontFamily: {
+              poppins: ['Poppins', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <link rel="icon" href="favicon.ico" />
@@ -341,70 +357,41 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#1b6086] text-white py-12 mt-16" data-aos="fade-up">
+    <footer class="bg-mauve text-white py-12 mt-16" data-aos="fade-up">
       <div class="max-w-6xl mx-auto px-4">
         <!-- Section principale du footer -->
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          <!-- Informations de l'entreprise -->
+          <!-- Informations du cabinet -->
           <div class="flex flex-col items-start">
             <div class="flex items-center mb-4">
-              <img
-                src="Image/Logo Rond.png"
-                alt="CFPC Dream Real-ICT Logo"
-                class="h-12 w-12 mr-3"
-              />
+              <img src="assets/img/logo.png" alt="Logo Cabinet Dentaire Mek’s" class="h-12 w-12 mr-3" />
               <div>
-                <div class="font-bold text-2xl">CFPC Dream Real-ICT</div>
-                <div class="text-sm opacity-90">
-                  Centre de Formation Professionnelle
-                </div>
+                <div class="font-bold text-2xl">Cabinet Dentaire Mek’s</div>
+                <div class="text-sm opacity-90">Douala & Yaoundé</div>
               </div>
             </div>
-            <p class="text-sm opacity-90 leading-relaxed">
-              Des formations numériques de qualité, accessibles et
-              professionnelles pour booster votre carrière.
-            </p>
+            <p class="text-sm opacity-90 leading-relaxed">Des soins dentaires sûrs, accessibles et professionnels.</p>
+            <p class="text-sm opacity-90 mt-2">Votre sourire, notre priorité à Douala & Yaoundé.</p>
           </div>
 
           <!-- Liens rapides -->
           <div>
-            <div class="font-semibold text-lg mb-4">Liens Rapides</div>
+            <div class="font-semibold text-lg mb-4">Liens rapides</div>
             <ul class="space-y-2">
               <li>
-                <a
-                  href="index.html"
-                  class="hover:text-[#56b94c] transition-colors duration-300"
-                  >Accueil</a
-                >
+                <a href="index.html" class="hover:text-magenta transition-colors duration-300">Accueil</a>
               </li>
               <li>
-                <a
-                  href="a-propos.html"
-                  class="hover:text-[#56b94c] transition-colors duration-300"
-                  >À Propos</a
-                >
+                <a href="a-propos.html" class="hover:text-magenta transition-colors duration-300">À propos</a>
               </li>
               <li>
-                <a
-                  href="formations.html"
-                  class="hover:text-[#56b94c] transition-colors duration-300"
-                  >Nos Formations</a
-                >
+                <a href="nos-services.html" class="hover:text-magenta transition-colors duration-300">Nos services</a>
               </li>
               <li>
-                <a
-                  href="contact.html"
-                  class="hover:text-[#56b94c] transition-colors duration-300"
-                  >Contact</a
-                >
+                <a href="contact.html" class="hover:text-magenta transition-colors duration-300">Contact</a>
               </li>
               <li>
-                <a
-                  target="_blank"
-                  href="inscription.html"
-                  class="hover:text-[#56b94c] transition-colors duration-300"
-                  >S'inscrire</a
-                >
+                <a href="gallery.html" class="hover:text-magenta transition-colors duration-300">Galerie</a>
               </li>
             </ul>
           </div>
@@ -414,28 +401,16 @@
             <div class="font-semibold text-lg mb-4">Contacts</div>
             <div class="space-y-3">
               <div class="flex items-center">
-                <i class="far fa-envelope w-5 mr-3 text-[#56b94c]"></i>
-                <span class="text-sm">cfpcdreamreal@gmail.com</span>
+                <i class="far fa-envelope w-5 mr-3 text-magenta"></i>
+                <a href="mailto:winimeke07@gmail.com" class="text-sm hover:text-magenta">winimeke07@gmail.com</a>
               </div>
               <div class="flex items-center">
-                <i class="fab fa-whatsapp w-5 mr-3 text-[#56b94c]"></i>
-                <a href="https://wa.me/237699000563" class="text-sm"
-                  >+237 699 000 563</a
-                >
+                <i class="fab fa-whatsapp w-5 mr-3 text-magenta"></i>
+                <a href="https://wa.me/237691560410" class="text-sm hover:text-magenta">+237 6 91 56 04 10</a>
               </div>
               <div class="flex items-center">
-                <i class="fab fa-whatsapp w-5 mr-3 text-[#56b94c]"></i>
-                <a href="https://wa.me/237677710707" class="text-sm"
-                  >+237 6 77 71 07 07</a
-                >
-              </div>
-              <div class="flex items-center">
-                <i class="fab fa-facebook w-5 mr-3 text-[#56b94c]"></i>
-                <a
-                  href="https://web.facebook.com/cfpcdreamreal/?_rdc=181&_rdr"
-                  class="text-sm"
-                  >cfpcdreamreal</a
-                >
+                <i class="fab fa-facebook w-5 mr-3 text-magenta"></i>
+                <a href="https://www.facebook.com/share/198eCfK1wM/?mibextid=wwXIfr" target="_blank" class="text-sm hover:text-magenta">Facebook /CabinetMeks</a>
               </div>
             </div>
           </div>
@@ -446,11 +421,11 @@
             <div class="space-y-3">
               <div>
                 <div class="text-sm opacity-90">Lundi - Vendredi</div>
-                <div class="font-semibold">8h - 17h30</div>
+                <div class="font-semibold">8h - 18h</div>
               </div>
               <div>
                 <div class="text-sm opacity-90">Samedi</div>
-                <div class="font-semibold">8h - 13h</div>
+                <div class="font-semibold">8h - 14h</div>
               </div>
               <div>
                 <div class="text-sm opacity-90">Dimanche</div>
@@ -463,7 +438,7 @@
         <!-- Ligne de séparation -->
         <div class="border-t border-white/20 pt-6">
           <div class="text-center text-sm opacity-80">
-            © Copyrith 2025 CFPC Dream Real-ICT. Tous droits réservés.
+            © 2025 Cabinet Dentaire Mek’s. Tous droits réservés.
           </div>
         </div>
       </div>

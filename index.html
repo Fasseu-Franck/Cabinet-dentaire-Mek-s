@@ -23,6 +23,22 @@
     />
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              azur: '#0c598f',
+              mauve: '#30263c',
+              magenta: '#d47ead',
+            },
+            fontFamily: {
+              poppins: ['Poppins', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
     <!-- Swiper.js CSS -->
     <link
       rel="stylesheet"
@@ -34,10 +50,9 @@
       href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
     />
     <!-- Fichier de Style CSS -->
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body class="bg-white text-mauve font-poppins">
-
     <!-- Header -->
     <header class="bg-azur text-white shadow-md">
       <div
@@ -45,7 +60,7 @@
       >
         <div class="flex items-center gap-2">
           <img
-            src="../GalerieLogo.png/"
+            src="assets/img/logo.png"
             alt="Logo Cabinet Mek’s"
             class="h-10 w-10 object-contain"
           />
@@ -53,21 +68,22 @@
         </div>
         <nav class="hidden md:flex gap-6 text-base">
           <a href="index.html" class="hover:text-magenta transition">Accueil</a>
-          <a href="services.html" class="hover:text-magenta transition"
+          <a href="nos-services.html" class="hover:text-magenta transition"
             >Nos services</a
           >
-          <a href="../a-propos.html" class="hover:text-magenta transition"
+          <a href="a-propos.html" class="hover:text-magenta transition"
             >À propos</a
           >
-          <a href="../gallery.html" class="hover:text-magenta transition"
+          <a href="gallery.html" class="hover:text-magenta transition"
             >Galerie</a
           >
-          <a href="../gallery.html" class="hover:text-magenta transition"
+          <a href="contact.html" class="hover:text-magenta transition"
             >Contact</a
           >
         </nav>
         <a
-          href="../rendez-vous.html class="md:block hidden bg-magenta text-white px-4 py-2 rounded-lg font-semibold hover:bg-azur transition"
+          href="rendez-vous.html"
+          class="md:block hidden bg-magenta text-white px-4 py-2 rounded-lg font-semibold hover:bg-azur transition"
           >Prendre rendez-vous</a
         >
         <button
@@ -123,9 +139,9 @@
             de rendez-vous rapide, équipe expérimentée, accueil humain.
           </p>
           <a
-            href="contact.html"
+            href="a-propos.html"
             class="bg-magenta px-6 py-3 rounded-lg text-white font-semibold hover:bg-white hover:text-azur transition"
-            >Prendre rendez-vous</a
+            >En savoir plus</a
           >
         </div>
         <div class="flex-1 flex justify-center">
@@ -641,68 +657,94 @@
       </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-mauve text-white mt-12 py-8">
-      <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-4">
-        <div>
-          <img src="assets/img/logo.png" alt="Logo Mek’s" class="h-10 mb-2" />
-          <p class="text-sm">
-            Des soins dentaires sûrs, accessibles et professionnels.
-          </p>
+    <!-- Footer -->
+    <footer class="bg-mauve text-white py-12 mt-16" data-aos="fade-up">
+      <div class="max-w-6xl mx-auto px-4">
+        <!-- Section principale du footer -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <!-- Informations du cabinet -->
+          <div class="flex flex-col items-start">
+            <div class="flex items-center mb-4">
+              <img src="Galerie/Logo.png" alt="Logo Cabinet Dentaire Mek’s" class="h-12 w-12 mr-3" />
+              <div>
+                <div class="font-bold text-2xl">Cabinet Dentaire Mek’s</div>
+                <div class="text-sm opacity-90">Douala & Yaoundé</div>
+              </div>
+            </div>
+            <p class="text-sm opacity-90 leading-relaxed">Des soins dentaires sûrs, accessibles et professionnels.</p>
+            <p class="text-sm opacity-90 mt-2">Votre sourire, notre priorité à Douala & Yaoundé.</p>
+          </div>
+
+          <!-- Liens rapides -->
+          <div>
+            <div class="font-semibold text-lg mb-4">Liens rapides</div>
+            <ul class="space-y-2">
+              <li>
+                <a href="index.html" class="hover:text-magenta transition-colors duration-300">Accueil</a>
+              </li>
+              <li>
+                <a href="a-propos.html" class="hover:text-magenta transition-colors duration-300">À propos</a>
+              </li>
+              <li>
+                <a href="nos-services.html" class="hover:text-magenta transition-colors duration-300">Nos services</a>
+              </li>
+              <li>
+                <a href="contact.html" class="hover:text-magenta transition-colors duration-300">Contact</a>
+              </li>
+              <li>
+                <a href="gallery.html" class="hover:text-magenta transition-colors duration-300">Galerie</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contacts -->
+          <div>
+            <div class="font-semibold text-lg mb-4">Contacts</div>
+            <div class="space-y-3">
+              <div class="flex items-center">
+                <i class="far fa-envelope w-5 mr-3 text-magenta"></i>
+                <a href="mailto:winimeke07@gmail.com" class="text-sm hover:text-magenta">winimeke07@gmail.com</a>
+              </div>
+              <div class="flex items-center">
+                <i class="fab fa-whatsapp w-5 mr-3 text-magenta"></i>
+                <a href="https://wa.me/237691560410" class="text-sm hover:text-magenta">+237 6 91 56 04 10</a>
+              </div>
+              <div class="flex items-center">
+                <i class="fab fa-facebook w-5 mr-3 text-magenta"></i>
+                <a href="https://www.facebook.com/share/198eCfK1wM/?mibextid=wwXIfr" target="_blank" class="text-sm hover:text-magenta">Facebook /CabinetMeks</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Horaires -->
+          <div>
+            <div class="font-semibold text-lg mb-4">Horaires</div>
+            <div class="space-y-3">
+              <div>
+                <div class="text-sm opacity-90">Lundi - Vendredi</div>
+                <div class="font-semibold">8h - 18h</div>
+              </div>
+              <div>
+                <div class="text-sm opacity-90">Samedi</div>
+                <div class="font-semibold">8h - 14h</div>
+              </div>
+              <div>
+                <div class="text-sm opacity-90">Dimanche</div>
+                <div class="font-semibold">Fermé</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-          <h3 class="font-semibold mb-2">Liens rapides</h3>
-          <ul class="space-y-1">
-            <li><a href="index.html" class="hover:text-magenta">Accueil</a></li>
-            <li>
-              <a href="services.html" class="hover:text-magenta"
-                >Nos services</a
-              >
-            </li>
-            <li>
-              <a href="a-propos.html" class="hover:text-magenta">À propos</a>
-            </li>
-            <li>
-              <a href="contact.html" class="hover:text-magenta">Contact</a>
-            </li>
-            <li>
-              <a href="gallery.html" class="hover:text-magenta">Galerie</a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="font-semibold mb-2">Contacts</h3>
-          <ul class="space-y-1 text-sm">
-            <li>
-              📧
-              <a href="mailto:winimeke07@gmail.com" class="hover:text-magenta"
-                >winimeke07@gmail.com</a
-              >
-            </li>
-            <li>
-              📞 WhatsApp :
-              <a href="tel:+237691560410" class="hover:text-magenta"
-                >+237 6 91 56 04 10</a
-              >
-            </li>
-            <li>
-              🔗
-              <a
-                href="https://www.facebook.com/share/198eCfK1wM/?mibextid=wwXIfr"
-                target="_blank"
-                class="hover:text-magenta"
-                >Facebook /CabinetMeks</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="flex flex-col justify-between">
-          <span class="text-xs"
-            >© 2025 Cabinet Dentaire Mek’s. Tous droits réservés.</span
-          >
+
+        <!-- Ligne de séparation -->
+        <div class="border-t border-white/20 pt-6">
+          <div class="text-center text-sm opacity-80">
+            © 2025 Cabinet Dentaire Mek’s. Tous droits réservés.
+          </div>
         </div>
       </div>
     </footer>
+
     <!-- JS LIBS & MAIN.JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
@@ -712,6 +754,6 @@
       src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"
       defer
     ></script>
-    <script src="assets/js/main.js" defer></script>
+    <script src="main.js" defer></script>
   </body>
 </html>
