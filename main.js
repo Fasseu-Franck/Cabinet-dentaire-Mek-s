@@ -240,6 +240,26 @@ function initSmoothScroll() {
   });
 }
 
+// FAQ accordion
+function initFAQAccordion() {
+  const toggles = document.querySelectorAll('.faq-toggle');
+  if (!toggles.length) return;
+
+  toggles.forEach((toggle) => {
+    toggle.addEventListener('click', () => {
+      const content = toggle.parentElement?.querySelector('.faq-content');
+      const chevron = toggle.querySelector('.fa-chevron-down');
+      if (!content) return;
+
+      content.classList.toggle('hidden');
+      if (chevron) {
+        chevron.classList.toggle('rotate-180');
+        chevron.style.transition = 'transform 200ms';
+      }
+    });
+  });
+}
+
 // Initialisation de toutes les fonctionnalités
 document.addEventListener('DOMContentLoaded', function() {
   initMobileMenu();
@@ -247,6 +267,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initCabinetCards();
   initIconAnimations();
   initSmoothScroll();
+  initFAQAccordion();
   
   // Animation d'entrée pour les éléments
   const animatedElements = document.querySelectorAll('[data-aos]');
@@ -263,4 +284,33 @@ window.addEventListener('error', function(e) {
 // Performance monitoring
 window.addEventListener('load', function() {
   console.log('Page chargée avec succès');
+  // Init Swiper testimonials if present
+  if (typeof Swiper !== 'undefined') {
+    const swiperEl = document.querySelector('.swiper');
+    if (swiperEl) {
+      new Swiper('.swiper', {
+        loop: true,
+        speed: 600,
+        spaceBetween: 24,
+        slidesPerView: 1,
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        },
+      });
+    }
+  }
 });
