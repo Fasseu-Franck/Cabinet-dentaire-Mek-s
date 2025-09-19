@@ -70,11 +70,26 @@
     </div>
   </header>
 
-  <!-- HERO / Présentation -->
-  <section class="bg-gray-50 py-16" data-aos="fade-up">
-    <div class="container mx-auto px-4 flex flex-col items-center text-center" data-aos="fade-up">
-      <h1 class="text-3xl md:text-4xl font-bold text-azur mb-4 flex items-center justify-center"><i class="fa-solid fa-book-open mr-3 text-magenta"></i>Notre histoire</h1>
-      <p class="mb-4 text-mauve text-lg font-medium">Une aventure humaine dédiée à votre sourire, de la fondation à aujourd’hui.</p>
+  <!-- HERO / Bannière À propos -->
+  <section class="bg-gray-50 py-16 text-center" data-aos="fade-down">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold text-azur mb-4 flex justify-center items-center">
+        <i class="fa-solid fa-users mr-3 text-magenta"></i>À propos de nous
+      </h1>
+      <p class="text-lg text-mauve mb-6 max-w-3xl mx-auto">
+        Découvrez l'histoire, la mission, les valeurs et l'équipe du Cabinet Dentaire Mek's. 
+        Une aventure humaine dédiée à votre sourire pour vous offrir des soins dentaires d'exception à Douala et Yaoundé.
+      </p>
+    </div>
+  </section>
+
+  <!-- Notre histoire -->
+  <section class="bg-white py-16" data-aos="fade-up">
+    <div class="container mx-auto px-4 flex flex-col items-center text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-azur mb-4 flex items-center justify-center">
+        <i class="fa-solid fa-book-open mr-3 text-magenta"></i>Notre histoire
+      </h2>
+      <p class="mb-8 text-mauve text-lg font-medium">Une aventure humaine dédiée à votre sourire, de la fondation à aujourd'hui.</p>
       <ol class="relative border-l-4 border-magenta mb-8 flex flex-col items-center w-full max-w-md mx-auto">
         <li class="mb-10 ml-8 w-full">
           <span class="absolute -left-6 flex items-center justify-center w-12 h-12 bg-magenta rounded-full text-white shadow-lg"><i class="fa-solid fa-seedling text-2xl"></i></span>
@@ -101,101 +116,70 @@
     </div>
   </section>
 
-
-  
-    <!-- Section Ce pourquoi nous luttons -->
-    <section class="max-w-6xl mx-auto py-16 px-4">
-      <h2 class="text-4xl font-bold text-center mb-10" data-aos="fade-down">
-        Ce pour quoi nous luttons.. ✊
-      </h2>
-
-      <!-- Ligne 1: Image à gauche, texte à droite -->
-      <div class="flex flex-col md:flex-row items-center gap-8 mb-12">
-        <div class="md:w-1/2" data-aos="fade-right">
-          <img
-            src="Image/Emploi.jpg"
-            alt="Accès rapide à l'emploi"
-            class="rounded-3xl shadow-lg w-full h-64 object-cover"
+  <!-- Notre mission -->
+  <section class="py-16 bg-white" data-aos="fade-up">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
+        <!-- Image à gauche -->
+        <div class="order-2 md:order-1" data-aos="fade-right">
+          <img 
+            src="Galerie/Soin (15).jpg" 
+            alt="Notre mission - Soins dentaires" 
+            class="rounded-xl shadow-lg w-full h-96 object-cover"
+            onerror="this.src='https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1470&auto=format&fit=crop'; this.alt='Soins dentaires professionnels'"
           />
         </div>
-        <div class="md:w-1/2" data-aos="fade-left">
-          <div class="bg-white rounded-3xl shadow-md p-8">
-            <h3 class="font-semibold text-xl mb-4 text-[#1b6086]">
-              🚀 Un accès rapide à l'emploi
-            </h3>
-            <p class="text-gray-600 mb-4">
-              Des formations conçues pour une insertion professionnelle efficace
-              et rapide.
-            </p>
-            <a
-              href="formations.html"
-              class="text-[#56b94c] font-semibold hover:underline inline-flex items-center"
-            >
-              Découvrir nos formations
-              <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-          </div>
+        
+        <!-- Texte à droite -->
+        <div class="order-1 md:order-2" data-aos="fade-left">
+          <h2 class="text-3xl md:text-4xl font-bold text-azur mb-6 flex items-center">
+            <i class="fa-solid fa-bullseye mr-3 text-magenta"></i>Notre Mission
+          </h2>
+          <p class="text-lg text-mauve mb-6 leading-relaxed">
+            Rendre la santé bucco-dentaire accessible à tous dans un environnement de confiance, 
+            d'écoute et d'innovation. Nous nous engageons à accompagner chaque patient avec 
+            pédagogie et bienveillance pour des sourires rayonnants et durables.
+          </p>
+          
+          <!-- Points sous forme de puces -->
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <div class="flex-shrink-0 w-6 h-6 bg-magenta rounded-full flex items-center justify-center mt-1 mr-3">
+                <i class="fa-solid fa-check text-white text-sm"></i>
+              </div>
+              <span class="text-mauve">
+                <strong class="text-azur">Soins personnalisés :</strong> Adapter chaque traitement aux besoins spécifiques de nos patients
+              </span>
+            </li>
+            <li class="flex items-start">
+              <div class="flex-shrink-0 w-6 h-6 bg-magenta rounded-full flex items-center justify-center mt-1 mr-3">
+                <i class="fa-solid fa-check text-white text-sm"></i>
+              </div>
+              <span class="text-mauve">
+                <strong class="text-azur">Excellence technique :</strong> Utiliser les dernières technologies pour garantir des résultats optimaux
+              </span>
+            </li>
+            <li class="flex items-start">
+              <div class="flex-shrink-0 w-6 h-6 bg-magenta rounded-full flex items-center justify-center mt-1 mr-3">
+                <i class="fa-solid fa-check text-white text-sm"></i>
+              </div>
+              <span class="text-mauve">
+                <strong class="text-azur">Approche humaine :</strong> Créer un lien de confiance et rassurer chaque patient tout au long du parcours
+              </span>
+            </li>
+            <li class="flex items-start">
+              <div class="flex-shrink-0 w-6 h-6 bg-magenta rounded-full flex items-center justify-center mt-1 mr-3">
+                <i class="fa-solid fa-check text-white text-sm"></i>
+              </div>
+              <span class="text-mauve">
+                <strong class="text-azur">Prévention active :</strong> Éduquer et sensibiliser pour maintenir une santé dentaire durable
+              </span>
+            </li>
+          </ul>
         </div>
       </div>
-
-      <!-- Ligne 2: Texte à gauche, image à droite -->
-      <div class="flex flex-col md:flex-row items-center gap-8 mb-12">
-        <div class="md:w-1/2" data-aos="fade-right">
-          <div class="bg-white rounded-3xl shadow-md p-8">
-            <h3 class="font-semibold text-xl mb-4 text-[#1b6086]">
-              🛠️ Des Compétences concrètes
-            </h3>
-            <p class="text-gray-600 mb-4">
-              Des savoir-faire pratiques et adaptés aux besoins du marché du
-              travail.
-            </p>
-            <a
-              href="formations.html"
-              class="text-[#56b94c] font-semibold hover:underline inline-flex items-center"
-            >
-              Découvrir nos formations
-              <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-          </div>
-        </div>
-        <div class="md:w-1/2" data-aos="fade-left">
-          <img
-            src="Image/competences.jpg"
-            alt="Compétences concrètes"
-            class="rounded-3xl shadow-lg w-full h-64 object-cover"
-          />
-        </div>
-      </div>
-
-      <!-- Ligne 3: Image à gauche, texte à droite -->
-      <div class="flex flex-col md:flex-row items-center gap-8">
-        <div class="md:w-1/2" data-aos="fade-right">
-          <img
-            src="Image/Diplome (2).jpg"
-            alt="Certifications reconnues"
-            class="rounded-3xl shadow-lg w-full h-64 object-cover"
-          />
-        </div>
-        <div class="md:w-1/2" data-aos="fade-left">
-          <div class="bg-white rounded-3xl shadow-md p-8">
-            <h3 class="font-semibold text-xl mb-4 text-[#1b6086]">
-              🎓 Des certifications reconnues par l'État
-            </h3>
-            <p class="text-gray-600 mb-4">
-              Des diplômes et attestations reconnus pour valoriser votre
-              parcours.
-            </p>
-            <a
-              href="formations.html"
-              class="text-[#56b94c] font-semibold hover:underline inline-flex items-center"
-            >
-              Découvrir nos formations
-              <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
+  </section>
 
   <!-- Bloc valeurs & engagements -->
   <section class="py-16 bg-gray-50" data-aos="fade-up">
@@ -549,8 +533,7 @@
               <div class="text-sm opacity-90">Douala & Yaoundé</div>
             </div>
           </div>
-          <p class="text-sm opacity-90 leading-relaxed">Des soins dentaires sûrs, accessibles et professionnels.</p>
-          <p class="text-sm opacity-90 mt-2">Votre sourire, notre priorité à Douala & Yaoundé.</p>
+          <p class="text-sm opacity-90 leading-relaxed font-semibold">La référence pour un sourire de rêve</p>
       </div>
 
         <!-- Liens rapides -->
