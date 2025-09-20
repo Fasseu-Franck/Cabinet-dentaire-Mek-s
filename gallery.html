@@ -59,11 +59,31 @@
     </div>
   </header>
 
-  <!-- Galerie Hero -->
-  <section class="bg-gray-50 py-16 text-center" data-aos="fade-down">
-    <div class="container mx-auto px-4">
-      <h1 class="text-4xl md:text-5xl font-bold text-azur mb-4 flex justify-center items-center">Galerie photos</h1>
-      <p class="text-lg text-mauve mb-6 max-w-2xl mx-auto">Découvrez l’ambiance du cabinet, nos espaces, notre équipe et quelques moments de vie à travers cette sélection de photos.</p>
+  <!-- Galerie Hero avec fond bleu -->
+  <section class="bg-azur text-white py-20 relative overflow-hidden" data-aos="fade-down">
+    <!-- Arrière-plan décoratif -->
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-10 right-20 w-32 h-32 bg-white/10 rounded-full animate-pulse"></div>
+      <div class="absolute bottom-10 left-20 w-40 h-40 bg-magenta/20 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+      <div class="absolute top-1/2 right-1/4 w-24 h-24 bg-white/5 rounded-full animate-pulse" style="animation-delay: 2s;"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <!-- En-tête modernisé -->
+      <div class="text-center">
+        <div class="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-lg rounded-full border border-white/30 mb-6">
+          <i class="fa-solid fa-images text-white mr-2"></i>
+          <span class="text-white font-semibold text-sm uppercase tracking-wide">Notre Galerie</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+          Découvrez notre<br>
+          <span class="text-yellow-300">univers dentaire</span>
+        </h1>
+        <p class="text-lg text-white/90 max-w-3xl mx-auto leading-relaxed">
+          Plongez dans l'ambiance chaleureuse de nos cabinets, découvrez nos espaces modernes, 
+          notre équipe passionnée et les moments précieux qui font la richesse de notre pratique dentaire.
+        </p>
+      </div>
     </div>
   </section>
 

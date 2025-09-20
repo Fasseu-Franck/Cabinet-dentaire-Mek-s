@@ -262,7 +262,6 @@
           <p class="text-sm text-mauve">Chaque sourire compte : notre priorité reste l’écoute, la pédagogie et la confiance avec nos patients.</p>
         </li>
       </ol>
-      <a href="contact.html" class="inline-block bg-magenta text-white px-6 py-3 rounded-lg font-semibold hover:bg-azur transition">Prendre rendez-vous</a>
     </div>
   </section>
 
@@ -728,118 +727,144 @@
     </div>
   </section>
 
-  <!-- FAQ Modernisée -->
-  <section class="py-20 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden" data-aos="fade-up">
-    <!-- Formes décoratives en arrière-plan -->
+  <!-- FAQ avec design divisé en deux sections -->
+  <section class="py-20 bg-white relative overflow-hidden" data-aos="fade-up">
+    <!-- Points décoratifs en arrière-plan -->
     <div class="absolute inset-0 pointer-events-none">
-      <div class="absolute top-16 left-10 w-24 h-24 bg-azur/5 rounded-full animate-pulse"></div>
-      <div class="absolute bottom-20 right-16 w-32 h-32 bg-magenta/5 rounded-full animate-pulse" style="animation-delay: 1.5s;"></div>
-      <div class="absolute top-1/3 right-1/4 w-16 h-16 bg-green-500/5 rounded-full animate-pulse" style="animation-delay: 0.8s;"></div>
+      <div class="absolute top-10 right-20 w-3 h-3 bg-azur/20 rounded-full"></div>
+      <div class="absolute top-20 right-32 w-2 h-2 bg-magenta/20 rounded-full"></div>
+      <div class="absolute top-32 right-16 w-4 h-4 bg-mauve/20 rounded-full"></div>
+      <div class="absolute top-40 right-40 w-2 h-2 bg-azur/20 rounded-full"></div>
     </div>
     
-    <div class="container mx-auto px-4 max-w-4xl relative z-10">
-      <!-- En-tête modernisé -->
-      <div class="text-center mb-16" data-aos="fade-down">
-        <div class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-azur/10 to-magenta/10 rounded-full border border-azur/20 mb-6">
-          <span class="text-azur font-semibold text-sm uppercase tracking-wide">Support Client</span>
+    <div class="container mx-auto px-4 max-w-7xl relative z-10">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        
+        <!-- Section gauche : Forme arrondie avec dégradé et statistiques rapides -->
+        <div class="lg:w-1/2 relative" data-aos="fade-right" data-aos-delay="200">
+          <!-- Forme organique avec dégradé -->
+          <div class="relative">
+            <!-- Forme principale arrondie -->
+            <div class="bg-gradient-to-br from-azur via-blue-500 to-mauve rounded-[3rem] p-12 text-white relative overflow-hidden">
+              <!-- Formes décoratives internes -->
+              <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+              <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 -translate-x-12"></div>
+              <div class="absolute top-1/2 right-1/4 w-16 h-16 bg-white/5 rounded-full"></div>
+              
+              <!-- Contenu textuel -->
+              <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                  Questions<br>
+                  <span class="text-yellow-300">fréquentes</span>
+                </h2>
+                <p class="text-lg text-white/90 leading-relaxed mb-8 max-w-md">
+                  Cabinet Dentaire Mek's est plus qu'un simple cabinet dentaire. Nous offrons des soins personnalisés et des conseils d'experts pour votre santé bucco-dentaire.
+                </p>
+                
+                <!-- Statistiques rapides -->
+                <div class="flex items-center gap-6">
+                  <div class="text-center">
+                    <div class="text-2xl font-bold text-yellow-300">5000+</div>
+                    <div class="text-sm text-white/80">Patients</div>
+                  </div>
+                  <div class="text-center">
+                    <div class="text-2xl font-bold text-yellow-300">10+</div>
+                    <div class="text-sm text-white/80">Années</div>
+                  </div>
+                  <div class="text-center">
+                    <div class="text-2xl font-bold text-yellow-300">2</div>
+                    <div class="text-sm text-white/80">Cabinets</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <h2 class="text-4xl md:text-5xl font-bold text-azur mb-4">Questions fréquentes</h2>
-        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-          Trouvez rapidement les réponses aux questions les plus courantes concernant nos services dentaires.
-        </p>
-      </div>
+        
+        <!-- Section droite : Questions et réponses avec accordéon -->
+        <div class="lg:w-1/2" data-aos="fade-left" data-aos-delay="300">
       <div id="faq-accordion">
         <!-- Question 1 -->
-        <div class="mb-4 border-b border-gray-200">
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden mb-4">
           <button
             type="button"
-            class="w-full flex items-center justify-between py-4 text-left focus:outline-none faq-toggle"
+            class="w-full flex items-center justify-between p-6 text-left focus:outline-none faq-toggle group"
           >
             <span
               ><i class="fa-solid fa-calendar-check mr-2 text-magenta"></i
               >Comment prendre rendez-vous&nbsp;?</span
             >
-            <i
-              class="fa-solid fa-chevron-down text-azur transition-transform duration-200"
-            ></i>
+            <i class="fa-solid fa-chevron-down text-azur transition-transform duration-200 faq-icon"></i>
           </button>
-          <div class="faq-content hidden pb-4 pl-8 pr-2 text-mauve">
+          <div class="faq-content hidden px-6 pb-6">
             Vous pouvez prendre rendez-vous en ligne via notre formulaire, par
-            téléphone ou directement à l’accueil de l’un de nos cabinets.
+            téléphone ou directement à l'accueil de l'un de nos cabinets.
           </div>
         </div>
         <!-- Question 2 -->
-        <div class="mb-4 border-b border-gray-200">
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden mb-4">
           <button
             type="button"
-            class="w-full flex items-center justify-between py-4 text-left focus:outline-none faq-toggle"
+            class="w-full flex items-center justify-between p-6 text-left focus:outline-none faq-toggle group"
           >
             <span
               ><i class="fa-solid fa-tooth mr-2 text-magenta"></i>Quels types
               de soins proposez-vous&nbsp;?</span
             >
-            <i
-              class="fa-solid fa-chevron-down text-azur transition-transform duration-200"
-            ></i>
+            <i class="fa-solid fa-chevron-down text-azur transition-transform duration-200 faq-icon"></i>
           </button>
-          <div class="faq-content hidden pb-4 pl-8 pr-2 text-mauve">
+          <div class="faq-content hidden px-6 pb-6">
             Nous proposons tous les soins dentaires courants : prévention,
             orthodontie, chirurgie, esthétique, implants, blanchiment, etc.
           </div>
         </div>
         <!-- Question 3 -->
-        <div class="mb-4 border-b border-gray-200">
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden mb-4">
           <button
             type="button"
-            class="w-full flex items-center justify-between py-4 text-left focus:outline-none faq-toggle"
+            class="w-full flex items-center justify-between p-6 text-left focus:outline-none faq-toggle group"
           >
             <span
               ><i class="fa-solid fa-shield-heart mr-2 text-magenta"></i
               >Est-ce que les soins sont douloureux&nbsp;?</span
             >
-            <i
-              class="fa-solid fa-chevron-down text-azur transition-transform duration-200"
-            ></i>
+            <i class="fa-solid fa-chevron-down text-azur transition-transform duration-200 faq-icon"></i>
           </button>
-          <div class="faq-content hidden pb-4 pl-8 pr-2 text-mauve">
+          <div class="faq-content hidden px-6 pb-6">
             Nous mettons tout en œuvre pour garantir des soins indolores grâce
             à l’anesthésie moderne et à une approche rassurante.
           </div>
         </div>
         <!-- Question 4 -->
-        <div class="mb-4 border-b border-gray-200">
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden mb-4">
           <button
             type="button"
-            class="w-full flex items-center justify-between py-4 text-left focus:outline-none faq-toggle"
+            class="w-full flex items-center justify-between p-6 text-left focus:outline-none faq-toggle group"
           >
             <span
               ><i class="fa-solid fa-user-doctor mr-2 text-magenta"></i>Qui va
               s’occuper de moi&nbsp;?</span
             >
-            <i
-              class="fa-solid fa-chevron-down text-azur transition-transform duration-200"
-            ></i>
+            <i class="fa-solid fa-chevron-down text-azur transition-transform duration-200 faq-icon"></i>
           </button>
-          <div class="faq-content hidden pb-4 pl-8 pr-2 text-mauve">
+          <div class="faq-content hidden px-6 pb-6">
             Vous serez pris en charge par des chirurgiens-dentistes diplômés,
             expérimentés et à l’écoute de vos besoins.
           </div>
         </div>
         <!-- Question 5 -->
-        <div class="mb-4 border-b border-gray-200">
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden mb-4">
           <button
             type="button"
-            class="w-full flex items-center justify-between py-4 text-left focus:outline-none faq-toggle"
+            class="w-full flex items-center justify-between p-6 text-left focus:outline-none faq-toggle group"
           >
             <span
               ><i class="fa-solid fa-location-dot mr-2 text-magenta"></i>Où
               sont situés vos cabinets&nbsp;?</span
             >
-            <i
-              class="fa-solid fa-chevron-down text-azur transition-transform duration-200"
-            ></i>
+            <i class="fa-solid fa-chevron-down text-azur transition-transform duration-200 faq-icon"></i>
           </button>
-          <div class="faq-content hidden pb-4 pl-8 pr-2 text-mauve">
+          <div class="faq-content hidden px-6 pb-6">
             Nous sommes présents à Douala (Bonapriso) et à Yaoundé (Bastos).
             Retrouvez toutes les infos sur la page Contact.
           </div>
