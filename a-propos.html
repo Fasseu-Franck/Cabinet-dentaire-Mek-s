@@ -34,6 +34,25 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
   <style>
     body { font-family: 'Poppins', sans-serif; }
+    
+    /* Animations personnalisées */
+    @keyframes spin-slow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    
+    @keyframes reverse-spin {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
+    }
+    
+    .animate-spin-slow {
+      animation: spin-slow 8s linear infinite;
+    }
+    
+    .animate-reverse-spin {
+      animation: reverse-spin 6s linear infinite;
+    }
   </style>
 </head>
 <body class="bg-white text-mauve font-poppins">
@@ -117,107 +136,273 @@
   </section>
 
   <!-- Notre mission -->
-  <section class="py-16 bg-white" data-aos="fade-up">
+  <section class="py-20 bg-gradient-to-br from-gray-50 to-white overflow-hidden" data-aos="fade-up">
     <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
-        <!-- Image à gauche -->
-        <div class="order-2 md:order-1" data-aos="fade-right">
-          <img 
-            src="Galerie/Soin (15).jpg" 
-            alt="Notre mission - Soins dentaires" 
-            class="rounded-xl shadow-lg w-full h-96 object-cover"
-            onerror="this.src='https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1470&auto=format&fit=crop'; this.alt='Soins dentaires professionnels'"
-          />
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+        <!-- Image circulaire animée à gauche -->
+        <div class="order-2 lg:order-1 relative flex justify-center" data-aos="fade-right" data-aos-delay="200">
+          <!-- Cercles d'animation en arrière-plan -->
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-96 h-96 rounded-full border-4 border-magenta/20 animate-spin-slow"></div>
+            <div class="absolute w-80 h-80 rounded-full border-2 border-azur/20 animate-reverse-spin"></div>
+            <div class="absolute w-72 h-72 rounded-full bg-gradient-to-r from-magenta/5 to-azur/5 animate-pulse"></div>
+          </div>
+          
+          <!-- Image principale circulaire -->
+          <div class="relative z-10 w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
+            <img 
+              src="Galerie/Soin (15).jpg" 
+              alt="Notre mission - Soins dentaires" 
+              class="w-full h-full object-cover"
+              onerror="this.src='https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1470&auto=format&fit=crop'; this.alt='Soins dentaires professionnels'"
+            />
+            <!-- Overlay avec effet brillant -->
+            <div class="absolute inset-0 bg-gradient-to-br from-transparent via-white/10 to-transparent opacity-30 hover:opacity-50 transition-opacity duration-300"></div>
+          </div>
+          
+          <!-- Petites icônes flottantes -->
+          <div class="absolute top-10 right-10 w-12 h-12 bg-magenta rounded-full flex items-center justify-center shadow-lg animate-bounce" style="animation-delay: 0.5s;">
+            <i class="fa-solid fa-tooth text-white text-lg"></i>
+          </div>
+          <div class="absolute bottom-16 left-8 w-10 h-10 bg-azur rounded-full flex items-center justify-center shadow-lg animate-bounce" style="animation-delay: 1s;">
+            <i class="fa-solid fa-heart text-white text-sm"></i>
+          </div>
+          <div class="absolute top-20 left-16 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center shadow-lg animate-bounce" style="animation-delay: 1.5s;">
+            <i class="fa-solid fa-check text-white text-xs"></i>
+          </div>
         </div>
         
-        <!-- Texte à droite -->
-        <div class="order-1 md:order-2" data-aos="fade-left">
-          <h2 class="text-3xl md:text-4xl font-bold text-azur mb-6 flex items-center">
-            <i class="fa-solid fa-bullseye mr-3 text-magenta"></i>Notre Mission
+        <!-- Contenu textuel stylé à droite -->
+        <div class="order-1 lg:order-2 space-y-8" data-aos="fade-left" data-aos-delay="300">
+          <!-- Badge -->
+          <div class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-magenta/10 to-azur/10 rounded-full border border-magenta/20">
+            <span class="text-magenta font-semibold text-sm uppercase tracking-wide">Excellence Dentaire</span>
+          </div>
+          
+          <!-- Titre principal -->
+          <h2 class="text-4xl md:text-5xl font-bold text-azur leading-tight">
+            Notre Mission
           </h2>
-          <p class="text-lg text-mauve mb-6 leading-relaxed">
+          
+          <!-- Description -->
+          <p class="text-lg text-gray-600 leading-relaxed">
             Rendre la santé bucco-dentaire accessible à tous dans un environnement de confiance, 
             d'écoute et d'innovation. Nous nous engageons à accompagner chaque patient avec 
             pédagogie et bienveillance pour des sourires rayonnants et durables.
           </p>
           
-          <!-- Points sous forme de puces -->
-          <ul class="space-y-4">
-            <li class="flex items-start">
-              <div class="flex-shrink-0 w-6 h-6 bg-magenta rounded-full flex items-center justify-center mt-1 mr-3">
-                <i class="fa-solid fa-check text-white text-sm"></i>
+          <!-- Grille de services avec style moderne -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+              <div class="flex items-center mb-3">
+                <div class="w-10 h-10 bg-gradient-to-r from-magenta to-magenta/80 rounded-xl flex items-center justify-center mr-3">
+                  <i class="fa-solid fa-user-check text-white text-sm"></i>
+                </div>
+                <h3 class="font-bold text-azur">Soins Personnalisés</h3>
               </div>
-              <span class="text-mauve">
-                <strong class="text-azur">Soins personnalisés :</strong> Adapter chaque traitement aux besoins spécifiques de nos patients
-              </span>
-            </li>
-            <li class="flex items-start">
-              <div class="flex-shrink-0 w-6 h-6 bg-magenta rounded-full flex items-center justify-center mt-1 mr-3">
-                <i class="fa-solid fa-check text-white text-sm"></i>
+              <p class="text-gray-600 text-sm">Adapter chaque traitement aux besoins spécifiques</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+              <div class="flex items-center mb-3">
+                <div class="w-10 h-10 bg-gradient-to-r from-azur to-azur/80 rounded-xl flex items-center justify-center mr-3">
+                  <i class="fa-solid fa-microscope text-white text-sm"></i>
+                </div>
+                <h3 class="font-bold text-azur">Excellence Technique</h3>
               </div>
-              <span class="text-mauve">
-                <strong class="text-azur">Excellence technique :</strong> Utiliser les dernières technologies pour garantir des résultats optimaux
-              </span>
-            </li>
-            <li class="flex items-start">
-              <div class="flex-shrink-0 w-6 h-6 bg-magenta rounded-full flex items-center justify-center mt-1 mr-3">
-                <i class="fa-solid fa-check text-white text-sm"></i>
+              <p class="text-gray-600 text-sm">Technologies de pointe pour des résultats optimaux</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+              <div class="flex items-center mb-3">
+                <div class="w-10 h-10 bg-gradient-to-r from-green-500 to-green-400 rounded-xl flex items-center justify-center mr-3">
+                  <i class="fa-solid fa-handshake text-white text-sm"></i>
+                </div>
+                <h3 class="font-bold text-azur">Approche Humaine</h3>
               </div>
-              <span class="text-mauve">
-                <strong class="text-azur">Approche humaine :</strong> Créer un lien de confiance et rassurer chaque patient tout au long du parcours
-              </span>
-            </li>
-            <li class="flex items-start">
-              <div class="flex-shrink-0 w-6 h-6 bg-magenta rounded-full flex items-center justify-center mt-1 mr-3">
-                <i class="fa-solid fa-check text-white text-sm"></i>
+              <p class="text-gray-600 text-sm">Lien de confiance et réassurance constante</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+              <div class="flex items-center mb-3">
+                <div class="w-10 h-10 bg-gradient-to-r from-orange-500 to-orange-400 rounded-xl flex items-center justify-center mr-3">
+                  <i class="fa-solid fa-graduation-cap text-white text-sm"></i>
+                </div>
+                <h3 class="font-bold text-azur">Prévention Active</h3>
               </div>
-              <span class="text-mauve">
-                <strong class="text-azur">Prévention active :</strong> Éduquer et sensibiliser pour maintenir une santé dentaire durable
-              </span>
-            </li>
-          </ul>
+              <p class="text-gray-600 text-sm">Éducation pour une santé dentaire durable</p>
+            </div>
+          </div>
+          
+          <!-- Bouton d'action -->
+          <div class="pt-4">
+            <a href="contact.html" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-magenta to-azur text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+              <span>Découvrir nos services</span>
+              <i class="fa-solid fa-arrow-right ml-2"></i>
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Bloc valeurs & engagements -->
-  <section class="py-16 bg-gray-50" data-aos="fade-up">
-    <div class="container mx-auto px-4 max-w-4xl">
-      <h2 class="text-2xl md:text-3xl font-bold text-azur mb-10 text-center">Nos valeurs & engagements</h2>
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div class="flex flex-col items-center text-center p-6 rounded-lg shadow bg-white" data-aos="zoom-in" data-aos-delay="100">
-          <span class="text-5xl text-magenta mb-4"><i class="fa-solid fa-hand-holding-heart"></i></span>
-          <h3 class="font-semibold mb-2">Bienveillance</h3>
-          <p class="text-sm">Chaque patient est accueilli avec respect, écoute et empathie.</p>
+  <section class="py-20 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden" data-aos="fade-up">
+    <!-- Formes géométriques décoratives en arrière-plan -->
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-20 left-10 w-32 h-32 bg-magenta/5 rounded-full animate-pulse"></div>
+      <div class="absolute bottom-20 right-10 w-40 h-40 bg-azur/5 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+      <div class="absolute top-1/2 left-1/4 w-24 h-24 bg-green-500/5 rounded-full animate-pulse" style="animation-delay: 2s;"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <!-- En-tête de section modernisé -->
+      <div class="text-center mb-16" data-aos="fade-down">
+        <div class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-azur/10 to-magenta/10 rounded-full border border-azur/20 mb-6">
+          <span class="text-azur font-semibold text-sm uppercase tracking-wide">Nos Fondements</span>
         </div>
-        <div class="flex flex-col items-center text-center p-6 rounded-lg shadow bg-white" data-aos="zoom-in" data-aos-delay="200">
-          <span class="text-5xl text-magenta mb-4"><i class="fa-solid fa-lightbulb"></i></span>
-          <h3 class="font-semibold mb-2">Innovation</h3>
-          <p class="text-sm">Nous utilisons des techniques et équipements de pointe pour garantir la qualité et la sécurité des soins.</p>
+        <h2 class="text-4xl md:text-5xl font-bold text-azur mb-4">Valeurs & Engagements</h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Les principes qui guident chaque jour notre pratique et définissent notre engagement 
+          envers l'excellence des soins dentaires.
+        </p>
+      </div>
+      
+      <!-- Grille de valeurs modernisée -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        <!-- Bienveillance -->
+        <div class="group relative" data-aos="fade-up" data-aos-delay="100">
+          <div class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 h-full">
+            <!-- Icône avec effet d'animation -->
+            <div class="relative mb-6">
+              <div class="w-20 h-20 bg-gradient-to-br from-magenta to-pink-400 rounded-2xl flex items-center justify-center mx-auto transform group-hover:rotate-6 transition-transform duration-300 shadow-lg">
+                <i class="fa-solid fa-hand-holding-heart text-white text-2xl"></i>
+              </div>
+              <!-- Cercle animé en arrière-plan -->
+              <div class="absolute inset-0 w-20 h-20 bg-magenta/20 rounded-2xl mx-auto animate-ping opacity-20 group-hover:opacity-40"></div>
+            </div>
+            
+            <h3 class="text-xl font-bold text-azur mb-4 text-center group-hover:text-magenta transition-colors duration-300">
+              Bienveillance
+            </h3>
+            <p class="text-gray-600 text-center leading-relaxed">
+              Chaque patient est accueilli avec respect, écoute et empathie dans un environnement rassurant.
+            </p>
+            
+            <!-- Barre de progression décorative -->
+            <div class="mt-6 h-1 bg-gray-200 rounded-full overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-magenta to-pink-400 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-1000"></div>
+            </div>
+          </div>
         </div>
-        <div class="flex flex-col items-center text-center p-6 rounded-lg shadow bg-white" data-aos="zoom-in" data-aos-delay="300">
-          <span class="text-5xl text-magenta mb-4"><i class="fa-solid fa-people-group"></i></span>
-          <h3 class="font-semibold mb-2">Pédagogie</h3>
-          <p class="text-sm">Nous expliquons chaque étape des soins et accompagnons nos patients dans la prévention.</p>
+        
+        <!-- Innovation -->
+        <div class="group relative" data-aos="fade-up" data-aos-delay="200">
+          <div class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 h-full">
+            <div class="relative mb-6">
+              <div class="w-20 h-20 bg-gradient-to-br from-azur to-blue-500 rounded-2xl flex items-center justify-center mx-auto transform group-hover:rotate-6 transition-transform duration-300 shadow-lg">
+                <i class="fa-solid fa-lightbulb text-white text-2xl"></i>
+              </div>
+              <div class="absolute inset-0 w-20 h-20 bg-azur/20 rounded-2xl mx-auto animate-ping opacity-20 group-hover:opacity-40"></div>
+            </div>
+            
+            <h3 class="text-xl font-bold text-azur mb-4 text-center group-hover:text-blue-500 transition-colors duration-300">
+              Innovation
+            </h3>
+            <p class="text-gray-600 text-center leading-relaxed">
+              Techniques et équipements de pointe pour garantir la qualité et la sécurité de tous nos soins.
+            </p>
+            
+            <div class="mt-6 h-1 bg-gray-200 rounded-full overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-azur to-blue-500 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-1000"></div>
+            </div>
+          </div>
         </div>
-        <div class="flex flex-col items-center text-center p-6 rounded-lg shadow bg-white" data-aos="zoom-in" data-aos-delay="400">
-          <span class="text-5xl text-magenta mb-4"><i class="fa-solid fa-scale-balanced"></i></span>
-          <h3 class="font-semibold mb-2">Transparence</h3>
-          <p class="text-sm">Nous communiquons clairement sur les soins, les tarifs et les alternatives, pour instaurer une relation de confiance.</p>
+        
+        <!-- Pédagogie -->
+        <div class="group relative" data-aos="fade-up" data-aos-delay="300">
+          <div class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 h-full">
+            <div class="relative mb-6">
+              <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-400 rounded-2xl flex items-center justify-center mx-auto transform group-hover:rotate-6 transition-transform duration-300 shadow-lg">
+                <i class="fa-solid fa-people-group text-white text-2xl"></i>
+              </div>
+              <div class="absolute inset-0 w-20 h-20 bg-green-500/20 rounded-2xl mx-auto animate-ping opacity-20 group-hover:opacity-40"></div>
+            </div>
+            
+            <h3 class="text-xl font-bold text-azur mb-4 text-center group-hover:text-green-500 transition-colors duration-300">
+              Pédagogie
+            </h3>
+            <p class="text-gray-600 text-center leading-relaxed">
+              Explication claire de chaque étape et accompagnement personnalisé dans la prévention.
+            </p>
+            
+            <div class="mt-6 h-1 bg-gray-200 rounded-full overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-green-500 to-emerald-400 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-1000"></div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Transparence -->
+        <div class="group relative" data-aos="fade-up" data-aos-delay="400">
+          <div class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 h-full">
+            <div class="relative mb-6">
+              <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-amber-400 rounded-2xl flex items-center justify-center mx-auto transform group-hover:rotate-6 transition-transform duration-300 shadow-lg">
+                <i class="fa-solid fa-scale-balanced text-white text-2xl"></i>
+              </div>
+              <div class="absolute inset-0 w-20 h-20 bg-orange-500/20 rounded-2xl mx-auto animate-ping opacity-20 group-hover:opacity-40"></div>
+            </div>
+            
+            <h3 class="text-xl font-bold text-azur mb-4 text-center group-hover:text-orange-500 transition-colors duration-300">
+              Transparence
+            </h3>
+            <p class="text-gray-600 text-center leading-relaxed">
+              Communication claire sur les soins, tarifs et alternatives pour instaurer la confiance.
+            </p>
+            
+            <div class="mt-6 h-1 bg-gray-200 rounded-full overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-orange-500 to-amber-400 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-1000"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Section CTA -->
+      <div class="text-center mt-16" data-aos="fade-up" data-aos-delay="500">
+        <div class="bg-gradient-to-r from-azur/5 via-magenta/5 to-azur/5 rounded-3xl p-8 max-w-4xl mx-auto border border-azur/10">
+          <h3 class="text-2xl font-bold text-azur mb-4">Prêt à vivre l'expérience Cabinet Mek's ?</h3>
+          <p class="text-gray-600 mb-6">
+            Rejoignez les milliers de patients qui nous font confiance pour leur santé bucco-dentaire.
+          </p>
+          <a href="contact.html" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-azur to-magenta text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+            <span>Prendre rendez-vous</span>
+            <i class="fa-solid fa-calendar-check ml-2"></i>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-   <!-- Témoignages -->
-   <section class="py-12 bg-gray-50" data-aos="fade-up">
-    <div class="container mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-bold text-azur mb-8 text-center">
-        Ils nous font confiance
-      </h2>
-      <div class="swiper">
-        <div class="swiper-wrapper">
+  <!-- Témoignages avec mosaïque interactive -->
+  <section class="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden" data-aos="fade-up">
+    <!-- Formes décoratives en arrière-plan -->
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-10 right-20 w-20 h-20 bg-magenta/10 rounded-full animate-pulse"></div>
+      <div class="absolute bottom-20 left-20 w-16 h-16 bg-azur/10 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <!-- En-tête modernisé -->
+      <div class="text-center mb-16" data-aos="fade-down">
+        <div class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-magenta/10 to-azur/10 rounded-full border border-magenta/20 mb-6">
+          <span class="text-magenta font-semibold text-sm uppercase tracking-wide">Satisfaction Client</span>
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold text-azur mb-4">Ils nous font confiance</h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Découvrez les témoignages de nos patients satisfaits qui partagent leur expérience au Cabinet Mek's.
+        </p>
+      </div>
+      <!-- Mosaïque de témoignages -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-7xl mx-auto mb-8">
           <!-- Témoignage 1 -->
           <div
             class="swiper-slide flex flex-col items-center bg-white rounded-lg shadow p-6 mx-2"
@@ -412,12 +597,26 @@
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="py-12 bg-white" data-aos="fade-up">
-    <div class="container mx-auto px-4 max-w-3xl">
-      <h2 class="text-2xl md:text-3xl font-bold text-azur mb-8 text-center">
-        Questions fréquentes
-      </h2>
+  <!-- FAQ Modernisée -->
+  <section class="py-20 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden" data-aos="fade-up">
+    <!-- Formes décoratives en arrière-plan -->
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-16 left-10 w-24 h-24 bg-azur/5 rounded-full animate-pulse"></div>
+      <div class="absolute bottom-20 right-16 w-32 h-32 bg-magenta/5 rounded-full animate-pulse" style="animation-delay: 1.5s;"></div>
+      <div class="absolute top-1/3 right-1/4 w-16 h-16 bg-green-500/5 rounded-full animate-pulse" style="animation-delay: 0.8s;"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 max-w-4xl relative z-10">
+      <!-- En-tête modernisé -->
+      <div class="text-center mb-16" data-aos="fade-down">
+        <div class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-azur/10 to-magenta/10 rounded-full border border-azur/20 mb-6">
+          <span class="text-azur font-semibold text-sm uppercase tracking-wide">Support Client</span>
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold text-azur mb-4">Questions fréquentes</h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Trouvez rapidement les réponses aux questions les plus courantes concernant nos services dentaires.
+        </p>
+      </div>
       <div id="faq-accordion">
         <!-- Question 1 -->
         <div class="mb-4 border-b border-gray-200">
@@ -518,6 +717,216 @@
     </div>
   </section>
 
+  <!-- Modales de témoignages -->
+  <div id="testimonial-modal-overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300" onclick="closeTestimonialModal()">
+    <!-- Modal 1 -->
+    <div id="modal1" class="testimonial-modal absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-3xl p-8 max-w-lg w-full mx-4 scale-90 transition-transform duration-300 shadow-2xl">
+      <div class="flex items-center mb-6">
+        <div class="w-16 h-16 bg-gradient-to-br from-magenta to-pink-400 rounded-full flex items-center justify-center mr-4">
+          <i class="fa-solid fa-user text-white text-xl"></i>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-azur">Amina D.</h3>
+          <div class="flex text-yellow-400 mb-1">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <span class="text-sm text-gray-500">Douala</span>
+        </div>
+        <button onclick="closeTestimonialModal()" class="ml-auto w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors">
+          <i class="fa-solid fa-times text-gray-600"></i>
+        </button>
+      </div>
+      <p class="text-gray-700 leading-relaxed italic">
+        "Accueil chaleureux, soins professionnels et résultats visibles dès la première visite. Je recommande vivement ! L'équipe est très à l'écoute et explique tout en détail. Cabinet moderne avec un excellent suivi post-traitement."
+      </p>
+    </div>
+    
+    <!-- Modal 2 -->
+    <div id="modal2" class="testimonial-modal absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-3xl p-8 max-w-lg w-full mx-4 scale-90 transition-transform duration-300 shadow-2xl">
+      <div class="flex items-center mb-6">
+        <div class="w-16 h-16 bg-gradient-to-br from-azur to-blue-500 rounded-full flex items-center justify-center mr-4">
+          <i class="fa-solid fa-user-tie text-white text-xl"></i>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-azur">Jean-Paul M.</h3>
+          <div class="flex text-yellow-400 mb-1">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <span class="text-sm text-gray-500">Yaoundé</span>
+        </div>
+        <button onclick="closeTestimonialModal()" class="ml-auto w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors">
+          <i class="fa-solid fa-times text-gray-600"></i>
+        </button>
+      </div>
+      <p class="text-gray-700 leading-relaxed italic">
+        "Le service est rapide, les dentistes sont très rassurants et expliquent chaque étape. Cabinet au top avec des équipements modernes et une hygiène irréprochable. Personnel très professionnel et bienveillant."
+      </p>
+    </div>
+    
+    <!-- Modal 3 -->
+    <div id="modal3" class="testimonial-modal absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-3xl p-8 max-w-lg w-full mx-4 scale-90 transition-transform duration-300 shadow-2xl">
+      <div class="flex items-center mb-6">
+        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-400 rounded-full flex items-center justify-center mr-4">
+          <i class="fa-solid fa-user text-white text-xl"></i>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-azur">Chantal E.</h3>
+          <div class="flex text-yellow-400 mb-1">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <span class="text-sm text-gray-500">Douala</span>
+        </div>
+        <button onclick="closeTestimonialModal()" class="ml-auto w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors">
+          <i class="fa-solid fa-times text-gray-600"></i>
+        </button>
+      </div>
+      <p class="text-gray-700 leading-relaxed italic">
+        "J'avais peur du dentiste, mais ici j'ai trouvé une équipe à l'écoute et très douce. Merci ! L'approche humaine fait toute la différence. Ambiance apaisante et soins sans douleur."
+      </p>
+    </div>
+    
+    <!-- Modal 4 -->
+    <div id="modal4" class="testimonial-modal absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-3xl p-8 max-w-lg w-full mx-4 scale-90 transition-transform duration-300 shadow-2xl">
+      <div class="flex items-center mb-6">
+        <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-400 rounded-full flex items-center justify-center mr-4">
+          <i class="fa-solid fa-user-nurse text-white text-xl"></i>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-azur">Boris K.</h3>
+          <div class="flex text-yellow-400 mb-1">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <span class="text-sm text-gray-500">Yaoundé</span>
+        </div>
+        <button onclick="closeTestimonialModal()" class="ml-auto w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors">
+          <i class="fa-solid fa-times text-gray-600"></i>
+        </button>
+      </div>
+      <p class="text-gray-700 leading-relaxed italic">
+        "Très bon cabinet : hygiène impeccable, matériel moderne et personnel très rassurant. Installation récente avec tout l'équipement nécessaire. Rapport qualité-prix excellent."
+      </p>
+    </div>
+    
+    <!-- Modal 5 -->
+    <div id="modal5" class="testimonial-modal absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-3xl p-8 max-w-lg w-full mx-4 scale-90 transition-transform duration-300 shadow-2xl">
+      <div class="flex items-center mb-6">
+        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-400 rounded-full flex items-center justify-center mr-4">
+          <i class="fa-solid fa-user-graduate text-white text-xl"></i>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-azur">Linda F.</h3>
+          <div class="flex text-yellow-400 mb-1">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <span class="text-sm text-gray-500">Douala</span>
+        </div>
+        <button onclick="closeTestimonialModal()" class="ml-auto w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors">
+          <i class="fa-solid fa-times text-gray-600"></i>
+        </button>
+      </div>
+      <p class="text-gray-700 leading-relaxed italic">
+        "J'ai retrouvé confiance en mon sourire grâce au blanchiment ! Merci au Dr Meki et à toute l'équipe. Résultats visibles et durables. Technique moderne et sûre. Service après-vente impeccable."
+      </p>
+    </div>
+    
+    <!-- Modal 6 -->
+    <div id="modal6" class="testimonial-modal absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-3xl p-8 max-w-lg w-full mx-4 scale-90 transition-transform duration-300 shadow-2xl">
+      <div class="flex items-center mb-6">
+        <div class="w-16 h-16 bg-gradient-to-br from-teal-500 to-cyan-400 rounded-full flex items-center justify-center mr-4">
+          <i class="fa-solid fa-user text-white text-xl"></i>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-azur">Eric N.</h3>
+          <div class="flex text-yellow-400 mb-1">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <span class="text-sm text-gray-500">Douala</span>
+        </div>
+        <button onclick="closeTestimonialModal()" class="ml-auto w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors">
+          <i class="fa-solid fa-times text-gray-600"></i>
+        </button>
+      </div>
+      <p class="text-gray-700 leading-relaxed italic">
+        "Prise de rendez-vous très facile, horaires respectés et conseils personnalisés. Je recommande ! Système de réservation en ligne très pratique. Suivi régulier et prévention excellente."
+      </p>
+    </div>
+    
+    <!-- Modal 7 -->
+    <div id="modal7" class="testimonial-modal absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-3xl p-8 max-w-lg w-full mx-4 scale-90 transition-transform duration-300 shadow-2xl">
+      <div class="flex items-center mb-6">
+        <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-400 rounded-full flex items-center justify-center mr-4">
+          <i class="fa-solid fa-user-tie text-white text-xl"></i>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-azur">Fatou M.</h3>
+          <div class="flex text-yellow-400 mb-1">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <span class="text-sm text-gray-500">Yaoundé</span>
+        </div>
+        <button onclick="closeTestimonialModal()" class="ml-auto w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors">
+          <i class="fa-solid fa-times text-gray-600"></i>
+        </button>
+      </div>
+      <p class="text-gray-700 leading-relaxed italic">
+        "Ma fille a bénéficié d'un appareil orthodontique : le suivi est excellent et l'équipe très pédagogue. Explication claire des traitements, patience avec les enfants, résultats remarquables."
+      </p>
+    </div>
+    
+    <!-- Modal 8 -->
+    <div id="modal8" class="testimonial-modal absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-3xl p-8 max-w-lg w-full mx-4 scale-90 transition-transform duration-300 shadow-2xl">
+      <div class="flex items-center mb-6">
+        <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-400 rounded-full flex items-center justify-center mr-4">
+          <i class="fa-solid fa-user-astronaut text-white text-xl"></i>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-azur">Samuel T.</h3>
+          <div class="flex text-yellow-400 mb-1">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <span class="text-sm text-gray-500">Douala</span>
+        </div>
+        <button onclick="closeTestimonialModal()" class="ml-auto w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors">
+          <i class="fa-solid fa-times text-gray-600"></i>
+        </button>
+      </div>
+      <p class="text-gray-700 leading-relaxed italic">
+        "Très bon accueil, cabinet moderne, résultats rapides. Je recommande à tous mes proches. Efficacité remarquable, technologies de pointe, ambiance chaleureuse et professionnelle."
+      </p>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="bg-mauve text-white py-12 mt-16" data-aos="fade-up">
@@ -611,5 +1020,74 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
   <script src="main.js" defer></script>
+  
+  <!-- JavaScript pour les modales de témoignages -->
+  <script>
+    // Fonction pour ouvrir une modale de témoignage
+    function openTestimonialModal(modalId) {
+      const overlay = document.getElementById('testimonial-modal-overlay');
+      const modal = document.getElementById(modalId);
+      
+      if (overlay && modal) {
+        // Cacher toutes les modales
+        document.querySelectorAll('.testimonial-modal').forEach(m => {
+          m.style.display = 'none';
+        });
+        
+        // Afficher l'overlay et la modale spécifique
+        overlay.classList.remove('hidden');
+        modal.style.display = 'block';
+        
+        // Animation d'entrée
+        setTimeout(() => {
+          overlay.classList.remove('opacity-0');
+          modal.classList.remove('scale-90');
+          modal.classList.add('scale-100');
+        }, 10);
+        
+        // Empêcher le scroll du body
+        document.body.style.overflow = 'hidden';
+      }
+    }
+    
+    // Fonction pour fermer la modale
+    function closeTestimonialModal() {
+      const overlay = document.getElementById('testimonial-modal-overlay');
+      
+      if (overlay) {
+        // Animation de sortie
+        overlay.classList.add('opacity-0');
+        document.querySelectorAll('.testimonial-modal').forEach(modal => {
+          modal.classList.remove('scale-100');
+          modal.classList.add('scale-90');
+        });
+        
+        // Cacher après l'animation
+        setTimeout(() => {
+          overlay.classList.add('hidden');
+          document.querySelectorAll('.testimonial-modal').forEach(m => {
+            m.style.display = 'none';
+          });
+        }, 300);
+        
+        // Restaurer le scroll du body
+        document.body.style.overflow = 'auto';
+      }
+    }
+    
+    // Fermer la modale avec la touche Escape
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeTestimonialModal();
+      }
+    });
+    
+    // Empêcher la fermeture en cliquant sur la modale elle-même
+    document.querySelectorAll('.testimonial-modal').forEach(modal => {
+      modal.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+    });
+  </script>
 </body>
 </html>
