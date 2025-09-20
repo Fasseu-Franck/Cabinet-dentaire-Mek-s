@@ -51,6 +51,28 @@
     />
     <!-- Fichier de Style CSS -->
     <link rel="stylesheet" href="style.css" />
+    
+    <!-- Animations personnalisées pour la bannière -->
+    <style>
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+      
+      @keyframes float-delayed {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-15px); }
+      }
+      
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+      
+      .animate-float-delayed {
+        animation: float-delayed 3s ease-in-out infinite;
+        animation-delay: 1s;
+      }
+    </style>
   </head>
   <body class="bg-white text-mauve font-poppins">
     <!-- Header -->
@@ -125,97 +147,296 @@
       </div>
     </header>
 
-    <!-- BANNIERE PRINCIPALE -->
-    <section class="bg-azur text-white py-12 px-4" data-aos="fade-down">
-      <div
-        class="container mx-auto flex flex-col md:flex-row items-center gap-8"
-      >
-        <div class="flex-1">
-          <h1 class="text-3xl md:text-5xl font-bold mb-4">
-            Votre sourire, notre priorité à Douala & Yaoundé
+    <!-- BANNIERE PRINCIPALE MODERNISÉE -->
+    <section class="relative bg-gradient-to-br from-azur via-azur to-blue-900 text-white py-12 px-4 overflow-hidden" data-aos="fade-down">
+      <!-- Formes décoratives en arrière-plan -->
+      <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute top-10 right-10 w-64 h-64 bg-magenta/10 rounded-full animate-pulse"></div>
+        <div class="absolute bottom-20 left-10 w-48 h-48 bg-white/5 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+        <div class="absolute top-1/2 left-1/4 w-32 h-32 bg-magenta/5 rounded-full animate-pulse" style="animation-delay: 2s;"></div>
+        
+        <!-- Éléments décoratifs flottants -->
+        <div class="absolute top-20 left-20 text-magenta/20 text-4xl animate-bounce" style="animation-delay: 0.5s;">
+          <i class="fa-solid fa-tooth"></i>
+        </div>
+        <div class="absolute bottom-32 right-32 text-white/10 text-3xl animate-bounce" style="animation-delay: 1.5s;">
+          <i class="fa-solid fa-heart"></i>
+        </div>
+        <div class="absolute top-40 right-20 text-magenta/15 text-2xl animate-bounce" style="animation-delay: 2.5s;">
+          <i class="fa-solid fa-smile"></i>
+        </div>
+      </div>
+      
+      <div class="container mx-auto flex flex-col lg:flex-row items-center gap-12 relative z-10 max-w-7xl">
+        <!-- Contenu textuel -->
+        <div class="flex-1 lg:pr-8" data-aos="fade-right" data-aos-delay="200">
+          <!-- Badge d'accroche -->
+          <div class="inline-flex items-center px-4 py-2 bg-magenta/20 backdrop-blur-sm rounded-full border border-magenta/30 mb-6">
+            <i class="fa-solid fa-star text-magenta mr-2"></i>
+            <span class="text-sm font-semibold uppercase tracking-wide">Excellence Dentaire</span>
+          </div>
+          
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+            Votre <span class="text-magenta">sourire</span>,<br>
+            notre <span class="bg-gradient-to-r from-magenta to-pink-400 bg-clip-text text-transparent">priorité</span>
           </h1>
-          <p class="mb-6 text-lg">
-            Des soins dentaires sûrs, accessibles et professionnels.<br />Prise
-            de rendez-vous rapide, équipe expérimentée, accueil humain.
+          
+          <p class="mb-8 text-lg md:text-xl leading-relaxed text-gray-100 max-w-2xl">
+            Des soins dentaires d'exception à <strong class="text-magenta">Douala & Yaoundé</strong>.<br>
+            Équipe expérimentée, technologies de pointe, et un accueil chaleureux pour votre bien-être.
           </p>
-          <a
-            href="a-propos.html"
-            class="bg-magenta px-6 py-3 rounded-lg text-white font-semibold hover:bg-white hover:text-azur transition"
-            >En savoir plus</a
-          >
+          
+          <!-- Boutons d'action -->
+          <div class="flex flex-col sm:flex-row gap-4 mb-8">
+            <a
+              href="contact.html"
+              class="inline-flex items-center justify-center px-8 py-4 bg-magenta text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl hover:bg-magenta/90 transform hover:-translate-y-1 transition-all duration-300 group"
+            >
+              <i class="fa-solid fa-calendar-check mr-2 group-hover:scale-110 transition-transform"></i>
+              Prendre rendez-vous
+            </a>
+            <a
+              href="a-propos.html"
+              class="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-2xl border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 group"
+            >
+              <i class="fa-solid fa-info-circle mr-2 group-hover:scale-110 transition-transform"></i>
+              En savoir plus
+            </a>
+          </div>
+          
+          <!-- Statistiques rapides -->
+          <div class="flex flex-wrap gap-6 text-center sm:text-left">
+            <div class="flex items-center">
+              <div class="w-12 h-12 bg-magenta/20 rounded-full flex items-center justify-center mr-3">
+                <i class="fa-solid fa-users text-magenta"></i>
+              </div>
+              <div>
+                <div class="text-2xl font-bold">5000+</div>
+                <div class="text-sm text-gray-300">Patients satisfaits</div>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-12 h-12 bg-magenta/20 rounded-full flex items-center justify-center mr-3">
+                <i class="fa-solid fa-star text-magenta"></i>
+              </div>
+              <div>
+                <div class="text-2xl font-bold">4.9/5</div>
+                <div class="text-sm text-gray-300">Note moyenne</div>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="w-12 h-12 bg-magenta/20 rounded-full flex items-center justify-center mr-3">
+                <i class="fa-solid fa-location-dot text-magenta"></i>
+              </div>
+              <div>
+                <div class="text-2xl font-bold">2</div>
+                <div class="text-sm text-gray-300">Cabinets</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="flex-1 flex justify-center">
-          <img
-            src="Galerie/header.jpg"
-            alt="Dentiste au travail"
-            class="rounded-lg shadow-lg w-full max-w-sm object-cover"
-          />
+        
+        <!-- Section image -->
+        <div class="flex-1 flex justify-center" data-aos="fade-left" data-aos-delay="400">
+          <div class="relative">
+            <!-- Cercles d'animation en arrière-plan -->
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="w-[450px] h-[450px] rounded-full border-4 border-magenta/20 animate-spin opacity-30" style="animation-duration: 20s;"></div>
+              <div class="absolute w-[380px] h-[380px] rounded-full border-2 border-white/10 animate-ping opacity-20"></div>
+            </div>
+            
+            <!-- Image principale -->
+            <div class="relative z-10 w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-500 group">
+              <img
+                src="Galerie/header.jpg"
+                alt="Dentiste professionnel au travail - Cabinet Mek's"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                onerror="this.src='https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1470&auto=format&fit=crop'; this.alt='Soins dentaires professionnels'"
+              />
+              <!-- Overlay avec effet brillant -->
+              <div class="absolute inset-0 bg-gradient-to-br from-transparent via-magenta/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <!-- Badge de qualité -->
+              <div class="absolute top-4 right-4 bg-magenta text-white px-3 py-2 rounded-full text-sm font-semibold shadow-lg animate-bounce">
+                <i class="fa-solid fa-award mr-1"></i>
+                Excellence
+              </div>
+            </div>
+            
+            <!-- Cartes flottantes -->
+            <div class="absolute -bottom-8 -left-8 bg-white text-azur p-4 rounded-2xl shadow-xl animate-float hidden md:block z-20">
+              <div class="flex items-center">
+                <i class="fa-solid fa-clock text-magenta text-xl mr-2"></i>
+                <div>
+                  <div class="font-bold text-sm">Rendez-vous rapide</div>
+                  <div class="text-xs text-gray-600">Disponibilité 7j/7</div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="absolute -top-8 -right-12 bg-white text-azur p-4 rounded-2xl shadow-xl animate-float-delayed hidden md:block z-20">
+              <div class="flex items-center">
+                <i class="fa-solid fa-shield-check text-green-500 text-xl mr-2"></i>
+                <div>
+                  <div class="font-bold text-sm">Soins sécurisés</div>
+                  <div class="text-xs text-gray-600">Hygiène stricte</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      
+      <!-- Indicateur de scroll -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/60 animate-bounce">
+        <i class="fa-solid fa-chevron-down text-2xl"></i>
       </div>
     </section>
 
-    <!-- Pourquoi choisir le cabinet Mek’s -->
-    <section class="py-12 bg-white" data-aos="fade-up">
-      <div class="container mx-auto px-4">
-        <h2 class="text-2xl md:text-3xl font-bold text-azur mb-8 text-center">
-          Pourquoi choisir le Cabinet Dentaire Mek’s ?
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div
-            class="flex flex-col items-center text-center p-6 rounded-lg shadow hover:shadow-lg transition bg-gray-50"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <span class="text-4xl text-magenta mb-4"
-              ><i class="fa-solid fa-user-doctor"></i
-            ></span>
-            <h3 class="font-semibold mb-2">Équipe expérimentée</h3>
-            <p class="text-sm">
-              Des chirurgiens-dentistes qualifiés, passionnés et à l’écoute de
-              chaque patient.
-            </p>
+    <!-- Pourquoi choisir le cabinet Mek's - Section modernisée -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden" data-aos="fade-up">
+      <!-- Formes décoratives en arrière-plan -->
+      <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute top-20 left-10 w-32 h-32 bg-azur/5 rounded-full animate-pulse"></div>
+        <div class="absolute bottom-32 right-16 w-40 h-40 bg-magenta/5 rounded-full animate-pulse" style="animation-delay: 1.5s;"></div>
+        <div class="absolute top-1/2 right-1/4 w-24 h-24 bg-green-500/5 rounded-full animate-pulse" style="animation-delay: 0.8s;"></div>
+      </div>
+      
+      <div class="container mx-auto px-4 relative z-10">
+        <!-- En-tête modernisé -->
+        <div class="text-center mb-16" data-aos="fade-down">
+          <div class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-azur/10 to-magenta/10 rounded-full border border-azur/20 mb-6">
+            <span class="text-azur font-semibold text-sm uppercase tracking-wide">Nos Avantages</span>
           </div>
-          <div
-            class="flex flex-col items-center text-center p-6 rounded-lg shadow hover:shadow-lg transition bg-gray-50"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <span class="text-4xl text-magenta mb-4"
-              ><i class="fa-solid fa-shield-heart"></i
-            ></span>
-            <h3 class="font-semibold mb-2">Soins sécurisés</h3>
-            <p class="text-sm">
-              Hygiène stricte, équipements modernes et protocoles internationaux
-              pour votre sécurité.
-            </p>
+          <h2 class="text-4xl md:text-5xl font-bold text-azur mb-4">
+            Pourquoi choisir le Cabinet Mek's ?
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Découvrez les raisons qui font de nous le choix privilégié de milliers de patients 
+            à Douala et Yaoundé pour leurs soins dentaires.
+          </p>
+        </div>
+        
+        <!-- Grille des avantages modernisée -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+          <!-- Avantage 1 : Équipe expérimentée -->
+          <div class="group relative" data-aos="fade-up" data-aos-delay="100">
+            <div class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 h-full">
+              <!-- Icône avec effet d'animation -->
+              <div class="relative mb-6">
+                <div class="w-20 h-20 bg-gradient-to-br from-azur to-blue-500 rounded-2xl flex items-center justify-center mx-auto transform group-hover:rotate-6 transition-transform duration-300 shadow-lg">
+                  <i class="fa-solid fa-user-doctor text-white text-2xl"></i>
+                </div>
+                <!-- Cercle animé en arrière-plan -->
+                <div class="absolute inset-0 w-20 h-20 bg-azur/20 rounded-2xl mx-auto animate-ping opacity-20 group-hover:opacity-40"></div>
+              </div>
+              
+              <h3 class="text-xl font-bold text-azur mb-4 text-center group-hover:text-blue-500 transition-colors duration-300">
+                Équipe expérimentée
+              </h3>
+              <p class="text-gray-600 text-center leading-relaxed">
+                Des chirurgiens-dentistes qualifiés, passionnés et à l'écoute de chaque patient 
+                pour des soins personnalisés et de qualité.
+              </p>
+              
+              <!-- Barre de progression décorative -->
+              <div class="mt-6 h-1 bg-gray-200 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-azur to-blue-500 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-1000"></div>
+              </div>
+            </div>
           </div>
-          <div
-            class="flex flex-col items-center text-center p-6 rounded-lg shadow hover:shadow-lg transition bg-gray-50"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <span class="text-4xl text-magenta mb-4"
-              ><i class="fa-solid fa-smile-beam"></i
-            ></span>
-            <h3 class="font-semibold mb-2">Résultats visibles</h3>
-            <p class="text-sm">
-              Des centaines de patients satisfaits, des sourires transformés et
-              durables.
-            </p>
+          
+          <!-- Avantage 2 : Soins sécurisés -->
+          <div class="group relative" data-aos="fade-up" data-aos-delay="200">
+            <div class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 h-full">
+              <div class="relative mb-6">
+                <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-400 rounded-2xl flex items-center justify-center mx-auto transform group-hover:rotate-6 transition-transform duration-300 shadow-lg">
+                  <i class="fa-solid fa-shield-heart text-white text-2xl"></i>
+                </div>
+                <div class="absolute inset-0 w-20 h-20 bg-green-500/20 rounded-2xl mx-auto animate-ping opacity-20 group-hover:opacity-40"></div>
+              </div>
+              
+              <h3 class="text-xl font-bold text-azur mb-4 text-center group-hover:text-green-500 transition-colors duration-300">
+                Soins sécurisés
+              </h3>
+              <p class="text-gray-600 text-center leading-relaxed">
+                Hygiène stricte, équipements modernes et protocoles internationaux 
+                pour garantir votre sécurité et votre confort.
+              </p>
+              
+              <div class="mt-6 h-1 bg-gray-200 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-green-500 to-emerald-400 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-1000"></div>
+              </div>
+            </div>
           </div>
-          <div
-            class="flex flex-col items-center text-center p-6 rounded-lg shadow hover:shadow-lg transition bg-gray-50"
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
-            <span class="text-4xl text-magenta mb-4"
-              ><i class="fa-solid fa-calendar-check"></i
-            ></span>
-            <h3 class="font-semibold mb-2">Prise de rendez-vous facile</h3>
-            <p class="text-sm">
-              Réservez en ligne ou par WhatsApp, avec disponibilité rapide à
-              Douala et Yaoundé.
+          
+          <!-- Avantage 3 : Résultats visibles -->
+          <div class="group relative" data-aos="fade-up" data-aos-delay="300">
+            <div class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 h-full">
+              <div class="relative mb-6">
+                <div class="w-20 h-20 bg-gradient-to-br from-magenta to-pink-400 rounded-2xl flex items-center justify-center mx-auto transform group-hover:rotate-6 transition-transform duration-300 shadow-lg">
+                  <i class="fa-solid fa-smile-beam text-white text-2xl"></i>
+                </div>
+                <div class="absolute inset-0 w-20 h-20 bg-magenta/20 rounded-2xl mx-auto animate-ping opacity-20 group-hover:opacity-40"></div>
+              </div>
+              
+              <h3 class="text-xl font-bold text-azur mb-4 text-center group-hover:text-magenta transition-colors duration-300">
+                Résultats visibles
+              </h3>
+              <p class="text-gray-600 text-center leading-relaxed">
+                Des milliers de patients satisfaits, des sourires transformés et durables 
+                grâce à notre expertise reconnue.
+              </p>
+              
+              <div class="mt-6 h-1 bg-gray-200 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-magenta to-pink-400 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-1000"></div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Avantage 4 : Prise de rendez-vous facile -->
+          <div class="group relative" data-aos="fade-up" data-aos-delay="400">
+            <div class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 h-full">
+              <div class="relative mb-6">
+                <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-amber-400 rounded-2xl flex items-center justify-center mx-auto transform group-hover:rotate-6 transition-transform duration-300 shadow-lg">
+                  <i class="fa-solid fa-calendar-check text-white text-2xl"></i>
+                </div>
+                <div class="absolute inset-0 w-20 h-20 bg-orange-500/20 rounded-2xl mx-auto animate-ping opacity-20 group-hover:opacity-40"></div>
+              </div>
+              
+              <h3 class="text-xl font-bold text-azur mb-4 text-center group-hover:text-orange-500 transition-colors duration-300">
+                Rendez-vous facile
+              </h3>
+              <p class="text-gray-600 text-center leading-relaxed">
+                Réservez en ligne ou par WhatsApp, avec disponibilité rapide 
+                dans nos cabinets de Douala et Yaoundé.
+              </p>
+              
+              <div class="mt-6 h-1 bg-gray-200 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-orange-500 to-amber-400 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-1000"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Call-to-Action -->
+        <div class="text-center mt-16" data-aos="fade-up" data-aos-delay="500">
+          <div class="bg-gradient-to-r from-azur/5 via-magenta/5 to-azur/5 rounded-3xl p-8 max-w-4xl mx-auto border border-azur/10">
+            <h3 class="text-2xl font-bold text-azur mb-4">Prêt à découvrir l'excellence dentaire ?</h3>
+            <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+              Rejoignez les milliers de patients qui nous font confiance et découvrez 
+              pourquoi nous sommes le choix de référence pour vos soins dentaires.
             </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="contact.html" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-azur to-magenta text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                <i class="fa-solid fa-calendar-check mr-2"></i>
+                <span>Prendre rendez-vous</span>
+              </a>
+              <a href="nos-services.html" class="inline-flex items-center px-8 py-4 bg-white text-azur font-semibold rounded-2xl border-2 border-azur hover:bg-azur hover:text-white transition-all duration-300">
+                <i class="fa-solid fa-tooth mr-2"></i>
+                <span>Nos services</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
