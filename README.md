@@ -12,6 +12,7 @@
   - `js/` : Fichiers JavaScript (main.js)
 
 ## Technologies utilisées
+
 - HTML5 sémantique
 - Tailwind CSS (CDN)
 - Swiper.js (CDN)
@@ -20,11 +21,14 @@
 - Mobile-first, responsive
 
 ## Lancer le site
+
 Ouvrez simplement `index.html` dans votre navigateur.
 
 ## Personnalisation
-Ajoutez vos images dans `assets/img/`.
+
+Ajoutez vos images dans `Galerie`.
 Complétez les autres pages en suivant la même structure et la charte graphique.
 
 ## Auteur
-Développé pour Cabinet Dentaire Mek’s, Douala & Yaoundé.
+
+Développé pour Cabinet Dentaire Mek’s, Douala & Yaoundé par Fasseu Franck

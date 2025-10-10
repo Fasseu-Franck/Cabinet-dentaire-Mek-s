@@ -55,7 +55,7 @@
       >
         <div class="flex items-center gap-2">
           <img
-            src="assets/img/logo.png"
+            src="Galerie/Logo.png"
             alt="Logo Cabinet Mek's"
             class="h-10 w-10 object-contain"
           />
@@ -79,7 +79,7 @@
           >
         </nav>
         <a
-          href="rendez-vous.html"
+          href="contact.html"
           class="md:block hidden bg-magenta text-white px-4 py-2 rounded-lg font-semibold hover:bg-azur transition"
           >Prendre rendez-vous</a
         >
@@ -115,7 +115,7 @@
         <a href="gallery.html" class="block py-2">Galerie</a>
         <a href="contact.html" class="block py-2">Contact</a>
         <a
-          href="rendez-vous.html"
+          href="contact.html"
           class="block py-2 bg-magenta rounded text-center mt-2"
           >Prendre rendez-vous</a
         >
@@ -163,7 +163,7 @@
               </p>
               <p class="text-mauve py-1">
                 <i class="fa-solid fa-envelope text-magenta"></i>
-                <a href="mailto:winimeke07@gmail.com">winimeke07@gmail.com</a>
+                <a href="mailto:Mvotowini@gmail.com">Mvotowini@gmail.com</a>
               </p>
             </div>
             <div class="h-64 bg-gray-200 flex items-center justify-center">
@@ -205,7 +205,7 @@
               </p>
               <p class="text-mauve py-1">
                 <i class="fa-solid fa-envelope text-magenta"></i>
-                <a href="mailto:winimeke07@gmail.com">winimeke07@gmail.com</a>
+                <a href="mailto:Mvotowini@gmail.com">Mvotowini@gmail.com</a>
               </p>
             </div>
             <div class="h-64 bg-gray-200 flex items-center justify-center">
@@ -228,130 +228,198 @@
     </section>
 
     <!-- FORMULAIRE DE CONTACT -->
-    <section class="py-16 bg-white" data-aos="fade-up">
-      <div class="container mx-auto px-4 max-w-4xl">
-        <h2 class="text-2xl md:text-3xl font-bold text-azur mb-12 text-center">
-          Envoyez-nous un message
-        </h2>
-        <div class="contact-form">
-          <form class="space-y-6" id="contact-form">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label
-                  for="nom"
-                  class="block text-sm font-semibold text-mauve mb-2"
-                  >Nom *</label
-                >
-                <input
-                  type="text"
-                  id="nom"
-                  name="nom"
-                  required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-magenta focus:border-transparent"
-                />
-              </div>
-              <div>
-                <label
-                  for="prenom"
-                  class="block text-sm font-semibold text-mauve mb-2"
-                  >Prénom *</label
-                >
-                <input
-                  type="text"
-                  id="prenom"
-                  name="prenom"
-                  required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-magenta focus:border-transparent"
-                />
-              </div>
-            </div>
+    <section class="py-16 bg-white relative overflow-hidden" data-aos="fade-up">
+      <!-- Formes décoratives en arrière-plan -->
+      <div class="absolute inset-0 pointer-events-none">
+        <div
+          class="absolute top-20 left-20 w-32 h-32 bg-magenta/5 rounded-full animate-pulse"
+        ></div>
+        <div
+          class="absolute bottom-20 right-20 w-40 h-40 bg-azur/5 rounded-full animate-pulse"
+          style="animation-delay: 1s"
+        ></div>
+      </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label
-                  for="telephone"
-                  class="block text-sm font-semibold text-mauve mb-2"
-                  >Téléphone *</label
-                >
-                <input
-                  type="tel"
-                  id="telephone"
-                  name="telephone"
-                  required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-magenta focus:border-transparent"
-                />
-              </div>
-              <div>
-                <label
-                  for="email"
-                  class="block text-sm font-semibold text-mauve mb-2"
-                  >Email *</label
-                >
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-magenta focus:border-transparent"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label
-                for="cabinet"
-                class="block text-sm font-semibold text-mauve mb-2"
-                >Cabinet concerné *</label
-              >
-              <select
-                id="cabinet"
-                name="cabinet"
-                required
-                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-magenta focus:border-transparent"
-              >
-                <option value="">Sélectionnez un cabinet</option>
-                <option value="yaounde">Cabinet de Yaoundé</option>
-                <option value="douala">Cabinet de Douala</option>
-              </select>
-            </div>
-
-            <div>
-              <label
-                for="sujet"
-                class="block text-sm font-semibold text-mauve mb-2"
-                >Sujet *</label
-              >
-              <input
-                type="text"
-                id="sujet"
-                name="sujet"
-                required
-                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-magenta focus:border-transparent"
-              />
-            </div>
-
-            <div>
-              <label
-                for="message"
-                class="block text-sm font-semibold text-mauve mb-2"
-                >Message *</label
-              >
-              <textarea
-                id="message"
-                name="message"
-                rows="5"
-                required
-                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-magenta focus:border-transparent"
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              class="mx-auto block bg-azur text-white px-8 py-4 rounded-lg font-semibold hover:bg-azur transition shadow-lg flex items-center"
+      <div class="container mx-auto px-4 max-w-4xl relative z-10">
+        <!-- En-tête modernisé -->
+        <div class="text-center mb-12">
+          <div
+            class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-magenta/10 to-azur/10 rounded-full border border-magenta/20 mb-6"
+          >
+            <i class="fa-solid fa-envelope text-magenta mr-2"></i>
+            <span
+              class="text-magenta font-semibold text-sm uppercase tracking-wide"
+              >Formulaire de Contact</span
             >
-              <i class="fa-solid fa-paper-plane mr-2"></i>Envoyer ma demande
-            </button>
-          </form>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-azur mb-4">
+            Envoyez-nous un message
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Remplissez le formulaire ci-dessous et notre équipe vous répondra
+            dans les plus brefs délais.
+          </p>
+        </div>
+
+        <!-- Carte du formulaire -->
+        <div
+          class="bg-white rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 border border-gray-100 overflow-hidden"
+        >
+          <!-- Bande décorative en haut -->
+          <div class="h-2 bg-gradient-to-r from-azur via-magenta to-azur"></div>
+
+          <div class="p-8 md:p-12">
+            <form class="space-y-6" id="contact-form">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="group">
+                  <label
+                    for="nom"
+                    class="block text-sm font-bold text-azur mb-3 flex items-center"
+                  >
+                    <i class="fa-solid fa-user text-magenta mr-2"></i>
+                    Nom *
+                  </label>
+                  <input
+                    type="text"
+                    id="nom"
+                    name="nom"
+                    required
+                    placeholder="Votre nom"
+                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-magenta focus:border-magenta transition-all duration-300 hover:border-magenta/50 bg-gray-50 focus:bg-white"
+                  />
+                </div>
+                <div class="group">
+                  <label
+                    for="prenom"
+                    class="block text-sm font-bold text-azur mb-3 flex items-center"
+                  >
+                    <i class="fa-solid fa-user text-magenta mr-2"></i>
+                    Prénom *
+                  </label>
+                  <input
+                    type="text"
+                    id="prenom"
+                    name="prenom"
+                    required
+                    placeholder="Votre prénom"
+                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-magenta focus:border-magenta transition-all duration-300 hover:border-magenta/50 bg-gray-50 focus:bg-white"
+                  />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="group">
+                  <label
+                    for="telephone"
+                    class="block text-sm font-bold text-azur mb-3 flex items-center"
+                  >
+                    <i class="fa-solid fa-phone text-magenta mr-2"></i>
+                    Téléphone *
+                  </label>
+                  <input
+                    type="tel"
+                    id="telephone"
+                    name="telephone"
+                    required
+                    placeholder="+237 6 XX XX XX XX"
+                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-magenta focus:border-magenta transition-all duration-300 hover:border-magenta/50 bg-gray-50 focus:bg-white"
+                  />
+                </div>
+                <div class="group">
+                  <label
+                    for="email"
+                    class="block text-sm font-bold text-azur mb-3 flex items-center"
+                  >
+                    <i class="fa-solid fa-envelope text-magenta mr-2"></i>
+                    Email *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="votre@email.com"
+                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-magenta focus:border-magenta transition-all duration-300 hover:border-magenta/50 bg-gray-50 focus:bg-white"
+                  />
+                </div>
+              </div>
+
+              <div class="group">
+                <label
+                  for="cabinet"
+                  class="block text-sm font-bold text-azur mb-3 flex items-center"
+                >
+                  <i class="fa-solid fa-location-dot text-magenta mr-2"></i>
+                  Cabinet concerné *
+                </label>
+                <select
+                  id="cabinet"
+                  name="cabinet"
+                  required
+                  class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-magenta focus:border-magenta transition-all duration-300 hover:border-magenta/50 bg-gray-50 focus:bg-white cursor-pointer"
+                >
+                  <option value="">Sélectionnez un cabinet</option>
+                  <option value="yaounde">Cabinet de Yaoundé</option>
+                  <option value="douala">Cabinet de Douala</option>
+                </select>
+              </div>
+
+              <div class="group">
+                <label
+                  for="sujet"
+                  class="block text-sm font-bold text-azur mb-3 flex items-center"
+                >
+                  <i class="fa-solid fa-tag text-magenta mr-2"></i>
+                  Sujet *
+                </label>
+                <input
+                  type="text"
+                  id="sujet"
+                  name="sujet"
+                  required
+                  placeholder="Sujet de votre message"
+                  class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-magenta focus:border-magenta transition-all duration-300 hover:border-magenta/50 bg-gray-50 focus:bg-white"
+                />
+              </div>
+
+              <div class="group">
+                <label
+                  for="message"
+                  class="block text-sm font-bold text-azur mb-3 flex items-center"
+                >
+                  <i class="fa-solid fa-message text-magenta mr-2"></i>
+                  Message *
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  placeholder="Décrivez votre demande en détail..."
+                  class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-magenta focus:border-magenta transition-all duration-300 hover:border-magenta/50 bg-gray-50 focus:bg-white resize-none"
+                ></textarea>
+              </div>
+
+              <div class="text-center pt-4">
+                <button
+                  type="submit"
+                  class="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-magenta to-azur text-white font-bold text-base rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 hover:scale-105 transition-all duration-300 overflow-hidden"
+                >
+                  <div
+                    class="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
+                  <i
+                    class="fa-solid fa-paper-plane mr-3 group-hover:scale-110 transition-transform relative z-10"
+                  ></i>
+                  <span class="relative z-10">Envoyer ma demande</span>
+                </button>
+                <p class="text-sm text-gray-500 mt-4">
+                  <i class="fa-solid fa-clock mr-1"></i>
+                  Nous vous répondrons sous 24h
+                </p>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </section>
@@ -391,42 +459,6 @@
       </div>
     </section>
 
-    <!-- RÉSEAUX SOCIAUX -->
-    <section class="py-16 bg-white" data-aos="fade-up">
-      <div class="container mx-auto px-4 text-center">
-        <h2 class="text-2xl md:text-3xl font-bold text-azur mb-8">
-          Suivez-nous sur nos réseaux sociaux
-        </h2>
-        <div class="flex justify-center gap-6">
-          <a
-            href="https://www.facebook.com/share/198eCfK1wM/?mibextid=wwXIfr"
-            target="_blank"
-            class="bg-blue-600 text-white p-4 rounded-full hover:bg-blue-700 social-btn"
-          >
-            <i class="fa-brands fa-facebook-f text-2xl"></i>
-          </a>
-          <a
-            href="https://www.instagram.com/cabinetmek"
-            target="_blank"
-            class="bg-pink-600 text-white p-4 rounded-full hover:bg-pink-700 social-btn"
-          >
-            <i class="fa-brands fa-instagram text-2xl"></i>
-          </a>
-          <a
-            href="https://wa.me/237691560410"
-            target="_blank"
-            class="bg-green-500 text-white p-4 rounded-full hover:bg-green-600 social-btn"
-          >
-            <i class="fa-brands fa-whatsapp text-2xl"></i>
-          </a>
-        </div>
-        <p class="text-mauve mt-6">
-          Restez informés de nos actualités et conseils dentaires
-        </p>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
     <!-- Footer -->
     <footer class="bg-mauve text-white py-12 mt-16" data-aos="fade-up">
       <div class="max-w-6xl mx-auto px-4">
@@ -499,9 +531,9 @@
               <div class="flex items-center">
                 <i class="far fa-envelope w-5 mr-3 text-magenta"></i>
                 <a
-                  href="mailto:winimeke07@gmail.com"
+                  href="mailto:Mvotowini@gmail.com"
                   class="text-sm hover:text-magenta"
-                  >winimeke07@gmail.com</a
+                  >Mvotowini@gmail.com</a
                 >
               </div>
               <div class="flex items-center">

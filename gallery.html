@@ -6,6 +6,8 @@
   <title>Galerie | Cabinet Dentaire Mek’s</title>
   <meta name="description" content="Découvrez en images l'ambiance, les soins et la vie du Cabinet Dentaire Mek's à travers notre galerie photos.">
   <link rel="icon" href="favicon.jpg" />
+  <!-- Poppins font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -26,19 +28,19 @@
     }
   </script>
 </head>
-<body class="bg-white text-mauve">
+<body class="bg-white text-mauve font-poppins">
   <!-- HEADER -->
   <header class="bg-azur text-white shadow-md">
     <div class="container mx-auto flex justify-between items-center py-4 px-4">
       <div class="flex items-center gap-2">
-        <img src="assets/img/logo.png" alt="Logo Cabinet Mek’s" class="h-10 w-10 object-contain" />
+        <img src="Galerie/Logo.png" alt="Logo Cabinet Mek's" class="h-10 w-10 object-contain" />
         <span class="font-bold text-lg">Cabinet Dentaire Mek’s</span>
       </div>
       <nav class="hidden md:flex gap-6 text-base">
         <a href="index.html" class="hover:text-magenta transition">Accueil</a>
         <a href="nos-services.html" class="hover:text-magenta transition">Nos services</a>
         <a href="a-propos.html" class="hover:text-magenta transition">À propos</a>
-        <a href="gallery.html" class="hover:text-magenta transition font-bold underline">Galerie</a>
+        <a href="gallery.html" class="hover:text-magenta transition text-magenta">Galerie</a>
         <a href="contact.html" class="hover:text-magenta transition">Contact</a>
       </nav>
       <a href="contact.html" class="md:block hidden bg-magenta text-white px-4 py-2 rounded-lg font-semibold hover:bg-azur transition">Prendre rendez-vous</a>
@@ -50,47 +52,29 @@
     </div>
     <!-- Menu mobile -->
     <div id="mobile-menu" class="md:hidden hidden bg-azur text-white px-4 pb-4">
-      <nav class="flex flex-col gap-4 py-4 px-4">
-        <a href="index.html" class="hover:text-magenta transition">Accueil</a>
-        <a href="nos-services.html" class="hover:text-magenta transition">Nos services</a>
-        <a href="a-propos.html" class="hover:text-magenta transition">À propos</a>
-        <a href="gallery.html" class="hover:text-magenta transition font-bold underline">Galerie</a>
-        <a href="contact.html" class="hover:text-magenta transition">Contact</a>
-      </nav>
+      <a href="index.html" class="block py-2">Accueil</a>
+      <a href="nos-services.html" class="block py-2">Nos services</a>
+      <a href="a-propos.html" class="block py-2">À propos</a>
+      <a href="gallery.html" class="block py-2">Galerie</a>
+      <a href="contact.html" class="block py-2">Contact</a>
+      <a
+        href="contact.html"
+        class="block py-2 bg-magenta rounded text-center mt-2"
+        >Prendre rendez-vous</a
+      >
     </div>
   </header>
 
-  <!-- Galerie Hero avec fond bleu -->
-  <section class="bg-azur text-white py-20 relative overflow-hidden" data-aos="fade-down">
-    <!-- Arrière-plan décoratif -->
-    <div class="absolute inset-0 pointer-events-none">
-      <div class="absolute top-10 right-20 w-32 h-32 bg-white/10 rounded-full animate-pulse"></div>
-      <div class="absolute bottom-10 left-20 w-40 h-40 bg-magenta/20 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
-      <div class="absolute top-1/2 right-1/4 w-24 h-24 bg-white/5 rounded-full animate-pulse" style="animation-delay: 2s;"></div>
-    </div>
-    
-    <div class="container mx-auto px-4 relative z-10">
-      <!-- En-tête modernisé -->
-      <div class="text-center">
-        <div class="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-lg rounded-full border border-white/30 mb-6">
-          <i class="fa-solid fa-images text-white mr-2"></i>
-          <span class="text-white font-semibold text-sm uppercase tracking-wide">Notre Galerie</span>
-        </div>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-          Découvrez notre<br>
-          <span class="text-yellow-300">univers dentaire</span>
-        </h1>
-        <p class="text-lg text-white/90 max-w-3xl mx-auto leading-relaxed">
-          Plongez dans l'ambiance chaleureuse de nos cabinets, découvrez nos espaces modernes, 
-          notre équipe passionnée et les moments précieux qui font la richesse de notre pratique dentaire.
-        </p>
-      </div>
+  <!-- EN-TÊTE GALERIE -->
+  <section class="bg-azur text-white py-16 px-4" data-aos="fade-down">
+    <div class="container mx-auto text-center">
+      <h1 class="text-3xl md:text-5xl font-bold mb-6">Galerie Photos</h1>
+      <p class="text-lg md:text-xl max-w-3xl mx-auto">Découvrez en images notre cabinet, notre équipe et nos soins dentaires à Douala et Yaoundé.</p>
     </div>
   </section>
 
   <!-- Galerie Grid -->
-    <!-- sourire de patient  -->
-  <section class="container mx-auto px-4 pb-16">
+  <section class="container mx-auto px-4 py-16">
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" data-aos="fade-up">
       <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img" tabindex="0" data-img="Galerie/Patient (1).jpg" data-caption="Sourire patient 1">
         <img src="Galerie/Patient (1).jpg" alt="Sourire patient 1" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'" />
@@ -150,7 +134,7 @@
   <div class="container mx-auto px-4">
     <h3 class="text-2xl md:text-3xl font-bold mb-3">Prêt à prendre soin de votre sourire ?</h3>
     <p class="text-white/90 mb-8 max-w-2xl mx-auto">Notre équipe vous accueille à Douala et Yaoundé pour des soins personnalisés et rassurants.</p>
-    <a href="rendez-vous.html" class="inline-flex items-center gap-2 bg-magenta text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-azur transition shadow">
+    <a href="contact.html" class="inline-flex items-center gap-2 bg-magenta text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-azur transition shadow">
       <i class="fa-solid fa-calendar-check"></i>
       Prendre Rendez-vous
     </a>
@@ -202,7 +186,7 @@
           <div class="space-y-3">
             <div class="flex items-center">
               <i class="far fa-envelope w-5 mr-3 text-magenta"></i>
-              <a href="mailto:winimeke07@gmail.com" class="text-sm hover:text-magenta">winimeke07@gmail.com</a>
+              <a href="mailto:Mvotowini@gmail.com" class="text-sm hover:text-magenta">Mvotowini@gmail.com</a>
             </div>
             <div class="flex items-center">
               <i class="fab fa-whatsapp w-5 mr-3 text-magenta"></i>
