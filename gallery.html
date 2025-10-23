@@ -1,318 +1,1295 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galerie | Cabinet Dentaire Mek’s</title>
-  <meta name="description" content="Découvrez en images l'ambiance, les soins et la vie du Cabinet Dentaire Mek's à travers notre galerie photos.">
-  <link rel="icon" href="favicon.jpg" />
-  <!-- Poppins font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            azur: '#0c598f',
-            mauve: '#30263c',
-            magenta: '#d47ead',
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galerie | Cabinet Dentaire Mek’s</title>
+    <meta
+      name="description"
+      content="Découvrez en images l'ambiance, les soins et la vie du Cabinet Dentaire Mek's à travers notre galerie photos."
+    />
+    <link rel="icon" href="Galerie/favicon.jpg" />
+    <!-- Poppins font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              azur: "#0c598f",
+              mauve: "#30263c",
+              magenta: "#d47ead",
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+            },
           },
-          fontFamily: {
-            poppins: ['Poppins', 'sans-serif'],
-          },
-        }
-      }
-    }
-  </script>
-</head>
-<body class="bg-white text-mauve font-poppins">
-  <!-- HEADER -->
-  <header class="bg-azur text-white shadow-md">
-    <div class="container mx-auto flex justify-between items-center py-4 px-4">
-      <div class="flex items-center gap-2">
-        <img src="Galerie/Logo.png" alt="Logo Cabinet Mek's" class="h-10 w-10 object-contain" />
-        <span class="font-bold text-lg">Cabinet Dentaire Mek’s</span>
-      </div>
-      <nav class="hidden md:flex gap-6 text-base">
-        <a href="index.html" class="hover:text-magenta transition">Accueil</a>
-        <a href="nos-services.html" class="hover:text-magenta transition">Nos services</a>
-        <a href="a-propos.html" class="hover:text-magenta transition">À propos</a>
-        <a href="gallery.html" class="hover:text-magenta transition text-magenta">Galerie</a>
-        <a href="contact.html" class="hover:text-magenta transition">Contact</a>
-      </nav>
-      <a href="contact.html" class="md:block hidden bg-magenta text-white px-4 py-2 rounded-lg font-semibold hover:bg-azur transition">Prendre rendez-vous</a>
-      <button class="md:hidden flex items-center" id="menu-toggle" aria-label="Ouvrir le menu">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-7 h-7">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-    </div>
-    <!-- Menu mobile -->
-    <div id="mobile-menu" class="md:hidden hidden bg-azur text-white px-4 pb-4">
-      <a href="index.html" class="block py-2">Accueil</a>
-      <a href="nos-services.html" class="block py-2">Nos services</a>
-      <a href="a-propos.html" class="block py-2">À propos</a>
-      <a href="gallery.html" class="block py-2">Galerie</a>
-      <a href="contact.html" class="block py-2">Contact</a>
-      <a
-        href="contact.html"
-        class="block py-2 bg-magenta rounded text-center mt-2"
-        >Prendre rendez-vous</a
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-white text-mauve font-poppins">
+    <!-- HEADER -->
+    <header class="bg-azur text-white shadow-md">
+      <div
+        class="container mx-auto flex justify-between items-center py-4 px-4"
       >
-    </div>
-  </header>
+        <div class="flex items-center gap-2">
+          <img
+            src="Galerie/Logo.png"
+            alt="Logo Cabinet Mek's"
+            class="h-10 w-10 object-contain"
+          />
+          <span class="font-bold text-lg">Cabinet Dentaire Mek’s</span>
+        </div>
+        <nav class="hidden md:flex gap-6 text-base">
+          <a href="index.html" class="hover:text-magenta transition">Accueil</a>
+          <a href="nos-services.html" class="hover:text-magenta transition"
+            >Nos services</a
+          >
+          <a href="a-propos.html" class="hover:text-magenta transition"
+            >À propos</a
+          >
+          <a
+            href="gallery.html"
+            class="hover:text-magenta transition text-magenta"
+            >Galerie</a
+          >
+          <a href="contact.html" class="hover:text-magenta transition"
+            >Contact</a
+          >
+        </nav>
+        <a
+          href="contact.html"
+          class="md:block hidden bg-magenta text-white px-4 py-2 rounded-lg font-semibold hover:bg-azur transition"
+          >Prendre rendez-vous</a
+        >
+        <button
+          class="md:hidden flex items-center"
+          id="menu-toggle"
+          aria-label="Ouvrir le menu"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            class="w-7 h-7"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+      <!-- Menu mobile -->
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden bg-azur text-white px-4 pb-4"
+      >
+        <a href="index.html" class="block py-2">Accueil</a>
+        <a href="nos-services.html" class="block py-2">Nos services</a>
+        <a href="a-propos.html" class="block py-2">À propos</a>
+        <a href="gallery.html" class="block py-2">Galerie</a>
+        <a href="contact.html" class="block py-2">Contact</a>
+        <a
+          href="contact.html"
+          class="block py-2 bg-magenta rounded text-center mt-2"
+          >Prendre rendez-vous</a
+        >
+      </div>
+    </header>
 
-  <!-- EN-TÊTE GALERIE -->
-  <section class="bg-azur text-white py-16 px-4" data-aos="fade-down">
-    <div class="container mx-auto text-center">
-      <h1 class="text-3xl md:text-5xl font-bold mb-6">Galerie Photos</h1>
-      <p class="text-lg md:text-xl max-w-3xl mx-auto">Découvrez en images notre expertise et nos soins dentaires à Douala et Yaoundé.</p>
-    </div>
-  </section>
+    <!-- EN-TÊTE GALERIE -->
+    <section class="bg-azur text-white py-16 px-4" data-aos="fade-down">
+      <div class="container mx-auto text-center">
+        <h1 class="text-3xl md:text-5xl font-bold mb-6">Galerie Photos</h1>
+        <p class="text-lg md:text-xl max-w-3xl mx-auto">
+          Découvrez en images notre expertise et nos soins dentaires à Douala et
+          Yaoundé.
+        </p>
+      </div>
+    </section>
 
-  <!-- Galerie Grid -->
-  <section class="container mx-auto px-4 py-16">
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" data-aos="fade-up">
-      <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img" tabindex="0" data-img="Galerie/Patient (1).jpg" data-caption="Sourire patient 1">
-        <img src="Galerie/Patient (1).jpg" alt="Sourire patient 1" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'" />
-        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-          <span class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg">Sourire patient 1</span>
+    <!-- Navigation par onglets -->
+    <section class="container mx-auto px-4 py-8">
+      <div class="flex justify-center mb-8" data-aos="fade-up">
+        <div class="bg-gray-100 rounded-lg p-1 flex">
+          <button
+            id="tab-gallery"
+            class="px-6 py-3 rounded-md font-semibold transition-all duration-300 bg-azur text-white shadow-md"
+          >
+            <i class="fas fa-images mr-2"></i>Soins dentaires
+          </button>
+          <button
+            id="tab-before-after"
+            class="px-6 py-3 rounded-md font-semibold transition-all duration-300 text-mauve hover:bg-white hover:text-azur"
+          >
+            <i class="fas fa-exchange-alt mr-2"></i>Avant/Après
+          </button>
         </div>
       </div>
-      <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img" tabindex="0" data-img="Galerie/Patient (2).jpg" data-caption="Sourire patient 2">
-        <img src="Galerie/Patient (2).jpg" alt="Sourire patient 2" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'" />
-        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-          <span class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg">Sourire patient 2</span>
-        </div>
-      </div>
-      <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img" tabindex="0" data-img="Galerie/Patient (3).jpg" data-caption="Sourire patient 3">
-        <img src="Galerie/Patient (3).jpg" alt="Sourire patient 3" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'" />
-        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-          <span class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg">Sourire patient 3</span>
-        </div>
-      </div>
-      <!-- Boucle sur les images Soin (1) à Soin (28) -->
-      <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img" tabindex="0" data-img="Galerie/Soin (1).jpg" data-caption="Soin dentaire 1">
-        <img src="Galerie/Soin (1).jpg" alt="Soin dentaire 1" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'" />
-        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-          <span class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg">Soin dentaire 1</span>
-        </div>
-      </div>
-      <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img" tabindex="0" data-img="Galerie/Soin (2).jpg" data-caption="Soin dentaire 2">
-        <img src="Galerie/Soin (2).jpg" alt="Soin dentaire 2" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'" />
-        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-          <span class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg">Soin dentaire 2</span>
-        </div>
-      </div>
-      <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img" tabindex="0" data-img="Galerie/Soin (3).jpg" data-caption="Soin dentaire 3">
-        <img src="Galerie/Soin (13).jpg" alt="Soin dentaire 3" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'" />
-        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-          <span class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg">Soin dentaire 3</span>
-        </div>
-      </div>
-      <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img" tabindex="0" data-img="Galerie/Soin (4).jpg" data-caption="Soin dentaire 4">
-        <img src="Galerie/Soin (4).jpg" alt="Soin dentaire 4" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'" />
-        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-          <span class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg">Soin dentaire 4</span>
-        </div>
-      </div>
-      <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img" tabindex="0" data-img="Galerie/Soin (5).jpg" data-caption="Soin dentaire 5">
-        <img src="Galerie/Soin (5).jpg" alt="Soin dentaire 5" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'" />
-        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-          <span class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg">Soin dentaire 5</span>
-        </div>
-      </div>
-      
-      <!-- Images de soins 6-16 -->
-      <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img" tabindex="0" data-img="Galerie/Soin (6).jpg" data-caption="Soin dentaire 6">
-        <img src="Galerie/Soin (6).jpg" alt="Soin dentaire 6" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'" />
-        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-          <span class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg">Soin dentaire 6</span>
-        </div>
-      </div>
-      <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img" tabindex="0" data-img="Galerie/Soin (7).jpg" data-caption="Soin dentaire 7">
-        <img src="Galerie/Soin (7).jpg" alt="Soin dentaire 7" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'" />
-        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-          <span class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg">Soin dentaire 7</span>
-        </div>
-      </div>
-      <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img" tabindex="0" data-img="Galerie/Soin (8).jpg" data-caption="Soin dentaire 8">
-        <img src="Galerie/Soin (8).jpg" alt="Soin dentaire 8" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'" />
-        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-          <span class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg">Soin dentaire 8</span>
-        </div>
-      </div>
-      <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img" tabindex="0" data-img="Galerie/Soin (9).jpg" data-caption="Soin dentaire 9">
-        <img src="Galerie/Soin (9).jpg" alt="Soin dentaire 9" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'" />
-        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-          <span class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg">Soin dentaire 9</span>
-        </div>
-      </div>
-      <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img" tabindex="0" data-img="Galerie/Soin (10).jpg" data-caption="Soin dentaire 10">
-        <img src="Galerie/Soin (10).jpg" alt="Soin dentaire 10" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'" />
-        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-          <span class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg">Soin dentaire 10</span>
-        </div>
-      </div>
-      <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img" tabindex="0" data-img="Galerie/Soin (11).jpg" data-caption="Soin dentaire 11">
-        <img src="Galerie/Soin (11).jpg" alt="Soin dentaire 11" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'" />
-        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-          <span class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg">Soin dentaire 11</span>
-        </div>
-      </div>
-      <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img" tabindex="0" data-img="Galerie/Soin (12).jpg" data-caption="Soin dentaire 12">
-        <img src="Galerie/Soin (12).jpg" alt="Soin dentaire 12" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'" />
-        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-          <span class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg">Soin dentaire 12</span>
-        </div>
-      </div>
-      <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img" tabindex="0" data-img="Galerie/Soin (13).jpg" data-caption="Soin dentaire 13">
-        <img src="Galerie/Soin (13).jpg" alt="Soin dentaire 13" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'" />
-        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-          <span class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg">Soin dentaire 13</span>
-        </div>
-      </div>
-      <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img" tabindex="0" data-img="Galerie/Soin (14).jpg" data-caption="Soin dentaire 14">
-        <img src="Galerie/Soin (14).jpg" alt="Soin dentaire 14" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'" />
-        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-          <span class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg">Soin dentaire 14</span>
-        </div>
-      </div>
-      <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img" tabindex="0" data-img="Galerie/Soin (15).jpg" data-caption="Soin dentaire 15">
-        <img src="Galerie/Soin (15).jpg" alt="Soin dentaire 15" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'" />
-        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-          <span class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg">Soin dentaire 15</span>
-        </div>
-      </div>
-      <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img" tabindex="0" data-img="Galerie/Soin (16).jpg" data-caption="Soin dentaire 16">
-        <img src="Galerie/Soin (16).jpg" alt="Soin dentaire 16" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'" />
-        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-          <span class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg">Soin dentaire 16</span>
-        </div>
-      </div>
-    </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA Section stylisée -->
-  <section class="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden" data-aos="fade-up">
-    <!-- Formes décoratives en arrière-plan -->
-    <div class="absolute inset-0 pointer-events-none">
-      <div class="absolute top-20 right-20 w-40 h-40 bg-magenta/5 rounded-full animate-pulse"></div>
-      <div class="absolute bottom-16 left-16 w-32 h-32 bg-azur/5 rounded-full animate-pulse" style="animation-delay: 2s;"></div>
-      <div class="absolute top-1/2 left-1/3 w-24 h-24 bg-green-500/5 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
-    </div>
-    
-    <div class="container mx-auto px-4 relative z-10">
-      <!-- CTA stylisé -->
-      <div class="text-center" data-aos="fade-up" data-aos-delay="200">
-        <div class="bg-gradient-to-r from-magenta/5 via-azur/5 to-magenta/5 rounded-3xl p-8 max-w-4xl mx-auto border border-magenta/10">
-          <h3 class="text-2xl md:text-3xl font-bold text-azur mb-4">Prêt à prendre soin de votre sourire ?</h3>
-          <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Notre équipe vous accueille à Douala et Yaoundé pour des soins personnalisés et rassurants. 
-            Découvrez pourquoi des milliers de patients nous font confiance.
-          </p>
-          <a href="contact.html" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-magenta to-azur text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-            <i class="fa-solid fa-calendar-check mr-2"></i>
-            <span>Prendre rendez-vous</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-mauve text-white py-12 mt-16" data-aos="fade-up">
-    <div class="max-w-6xl mx-auto px-4">
-      <!-- Section principale du footer -->
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-        <!-- Informations du cabinet -->
-        <div class="flex flex-col items-start">
-          <div class="flex items-center mb-4">
-            <img src="Galerie/Logo.png" alt="Logo Cabinet Dentaire Mek’s" class="h-12 w-12 mr-3" />
-            <div>
-              <div class="font-bold text-2xl">Cabinet Dentaire Mek’s</div>
-              <div class="text-sm opacity-90">Douala & Yaoundé</div>
-            </div>
-          </div>
-          <p class="text-sm opacity-90 leading-relaxed font-semibold">La référence pour un sourire de rêve</p>
-        </div>
-
-        <!-- Liens rapides -->
-        <div>
-          <div class="font-semibold text-lg mb-4">Liens rapides</div>
-          <ul class="space-y-2">
-            <li>
-              <a href="index.html" class="hover:text-magenta transition-colors duration-300">Accueil</a>
-            </li>
-            <li>
-              <a href="a-propos.html" class="hover:text-magenta transition-colors duration-300">À propos</a>
-            </li>
-            <li>
-              <a href="nos-services.html" class="hover:text-magenta transition-colors duration-300">Nos services</a>
-            </li>
-            <li>
-              <a href="contact.html" class="hover:text-magenta transition-colors duration-300">Contact</a>
-            </li>
-            <li>
-              <a href="gallery.html" class="hover:text-magenta transition-colors duration-300">Galerie</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Contacts -->
-        <div>
-          <div class="font-semibold text-lg mb-4">Contacts</div>
-          <div class="space-y-3">
-            <div class="flex items-center">
-              <i class="far fa-envelope w-5 mr-3 text-magenta"></i>
-              <a href="mailto:Mvotowini@gmail.com" class="text-sm hover:text-magenta">Mvotowini@gmail.com</a>
-            </div>
-            <div class="flex items-center">
-              <i class="fab fa-whatsapp w-5 mr-3 text-magenta"></i>
-              <a href="https://wa.me/237691560410" class="text-sm hover:text-magenta">+237 6 91 56 04 10</a>
-            </div>
-            <div class="flex items-center">
-              <i class="fab fa-facebook w-5 mr-3 text-magenta"></i>
-              <a href="https://www.facebook.com/share/198eCfK1wM/?mibextid=wwXIfr" target="_blank" class="text-sm hover:text-magenta">Facebook /CabinetMeks</a>
-            </div>
+    <!-- Galerie générale -->
+    <section id="gallery-content" class="container mx-auto px-4 py-8">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+        data-aos="fade-up"
+      >
+        <!-- AvantApresBlanchiment -->
+        <div
+          class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img"
+          tabindex="0"
+          data-img="Galerie/AvantApresBlanchiment.jpg"
+          data-caption="Transformation blanchiment dentaire"
+        >
+          <img
+            src="Galerie/AvantApresBlanchiment.jpg"
+            alt="Transformation blanchiment dentaire"
+            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            onerror="this.style.display='none'"
+          />
+          <div
+            class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+          >
+            <span
+              class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg"
+              >Transformation blanchiment dentaire</span
+            >
           </div>
         </div>
 
-        <!-- Horaires -->
-        <div>
-          <div class="font-semibold text-lg mb-4">Horaires</div>
-          <div class="space-y-3">
-            <div>
-              <div class="text-sm opacity-90">Lundi - Vendredi</div>
-              <div class="font-semibold">8h - 18h</div>
-            </div>
-            <div>
-              <div class="text-sm opacity-90">Samedi</div>
-              <div class="font-semibold">8h - 14h</div>
-            </div>
-            <div>
-              <div class="text-sm opacity-90">Dimanche</div>
-              <div class="font-semibold">Fermé</div>
-            </div>
+        <!-- AvantApresBlanchiment (2) -->
+        <div
+          class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img"
+          tabindex="0"
+          data-img="Galerie/AvantApresBlanchiment (2).jpg"
+          data-caption="Blanchiment dentaire - Cas 2"
+        >
+          <img
+            src="Galerie/AvantApresBlanchiment (2).jpg"
+            alt="Blanchiment dentaire - Cas 2"
+            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            onerror="this.style.display='none'"
+          />
+          <div
+            class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+          >
+            <span
+              class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg"
+              >Blanchiment dentaire - Cas 2</span
+            >
+          </div>
+        </div>
+
+        <!-- AvantApresBlanchiment (3) -->
+        <div
+          class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img"
+          tabindex="0"
+          data-img="Galerie/AvantApresBlanchiment (3).jpg"
+          data-caption="Blanchiment dentaire - Cas 3"
+        >
+          <img
+            src="Galerie/AvantApresBlanchiment (3).jpg"
+            alt="Blanchiment dentaire - Cas 3"
+            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            onerror="this.style.display='none'"
+          />
+          <div
+            class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+          >
+            <span
+              class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg"
+              >Blanchiment dentaire - Cas 3</span
+            >
+          </div>
+        </div>
+
+        <!-- AvantApresBlanchiment (4) -->
+        <div
+          class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img"
+          tabindex="0"
+          data-img="Galerie/AvantApresBlanchiment (4).jpg"
+          data-caption="Blanchiment dentaire - Cas 4"
+        >
+          <img
+            src="Galerie/AvantApresBlanchiment (4).jpg"
+            alt="Blanchiment dentaire - Cas 4"
+            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            onerror="this.style.display='none'"
+          />
+          <div
+            class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+          >
+            <span
+              class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg"
+              >Blanchiment dentaire - Cas 4</span
+            >
+          </div>
+        </div>
+
+        <!-- AvantApresBlanchiment (5) -->
+        <div
+          class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img"
+          tabindex="0"
+          data-img="Galerie/AvantApresBlanchiment (5).jpg"
+          data-caption="Blanchiment dentaire - Cas 5"
+        >
+          <img
+            src="Galerie/AvantApresBlanchiment (5).jpg"
+            alt="Blanchiment dentaire - Cas 5"
+            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            onerror="this.style.display='none'"
+          />
+          <div
+            class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+          >
+            <span
+              class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg"
+              >Blanchiment dentaire - Cas 5</span
+            >
+          </div>
+        </div>
+
+        <!-- AvantApresBlanchiment (6) -->
+        <div
+          class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img"
+          tabindex="0"
+          data-img="Galerie/AvantApresBlanchiment (6).jpg"
+          data-caption="Blanchiment dentaire - Cas 6"
+        >
+          <img
+            src="Galerie/AvantApresBlanchiment (6).jpg"
+            alt="Blanchiment dentaire - Cas 6"
+            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            onerror="this.style.display='none'"
+          />
+          <div
+            class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+          >
+            <span
+              class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg"
+              >Blanchiment dentaire - Cas 6</span
+            >
+          </div>
+        </div>
+
+        <!-- AvantApresBlanchiment (7) -->
+        <div
+          class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img"
+          tabindex="0"
+          data-img="Galerie/AvantApresBlanchiment (7).jpg"
+          data-caption="Blanchiment dentaire - Cas 7"
+        >
+          <img
+            src="Galerie/AvantApresBlanchiment (7).jpg"
+            alt="Blanchiment dentaire - Cas 7"
+            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            onerror="this.style.display='none'"
+          />
+          <div
+            class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+          >
+            <span
+              class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg"
+              >Blanchiment dentaire - Cas 7</span
+            >
+          </div>
+        </div>
+
+        <!-- AvantApresBlanchiment (8) -->
+        <div
+          class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img"
+          tabindex="0"
+          data-img="Galerie/AvantApresBlanchiment (8).jpg"
+          data-caption="Blanchiment dentaire - Cas 8"
+        >
+          <img
+            src="Galerie/AvantApresBlanchiment (8).jpg"
+            alt="Blanchiment dentaire - Cas 8"
+            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            onerror="this.style.display='none'"
+          />
+          <div
+            class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+          >
+            <span
+              class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg"
+              >Blanchiment dentaire - Cas 8</span
+            >
+          </div>
+        </div>
+
+        <!-- AvantApresBlanchimentOrthodonthie -->
+        <div
+          class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img"
+          tabindex="0"
+          data-img="Galerie/AvantApresBlanchimentOrthodonthie.jpg"
+          data-caption="Blanchiment + Orthodontie"
+        >
+          <img
+            src="Galerie/AvantApresBlanchimentOrthodonthie.jpg"
+            alt="Blanchiment + Orthodontie"
+            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            onerror="this.style.display='none'"
+          />
+          <div
+            class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+          >
+            <span
+              class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg"
+              >Blanchiment + Orthodontie</span
+            >
+          </div>
+        </div>
+
+        <!-- AvantApresConstruction -->
+        <div
+          class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img"
+          tabindex="0"
+          data-img="Galerie/AvantApresConstruction.jpg"
+          data-caption="Construction dentaire"
+        >
+          <img
+            src="Galerie/AvantApresConstruction.jpg"
+            alt="Construction dentaire"
+            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            onerror="this.style.display='none'"
+          />
+          <div
+            class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+          >
+            <span
+              class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg"
+              >Construction dentaire</span
+            >
+          </div>
+        </div>
+
+        <!-- AvantApresDetatrage -->
+        <div
+          class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img"
+          tabindex="0"
+          data-img="Galerie/AvantApresDetatrage.jpg"
+          data-caption="Détartrage dentaire"
+        >
+          <img
+            src="Galerie/AvantApresDetatrage.jpg"
+            alt="Détartrage dentaire"
+            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            onerror="this.style.display='none'"
+          />
+          <div
+            class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+          >
+            <span
+              class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg"
+              >Détartrage dentaire</span
+            >
+          </div>
+        </div>
+
+        <!-- AvantApresOrthodontie -->
+        <div
+          class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img"
+          tabindex="0"
+          data-img="Galerie/AvantApresOrthodontie.jpg"
+          data-caption="Traitement orthodontique"
+        >
+          <img
+            src="Galerie/AvantApresOrthodontie.jpg"
+            alt="Traitement orthodontique"
+            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            onerror="this.style.display='none'"
+          />
+          <div
+            class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+          >
+            <span
+              class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg"
+              >Traitement orthodontique</span
+            >
+          </div>
+        </div>
+
+        <!-- AvantApresOrthodontie (2) -->
+        <div
+          class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img"
+          tabindex="0"
+          data-img="Galerie/AvantApresOrthodontie (2).jpg"
+          data-caption="Orthodontie - Cas 2"
+        >
+          <img
+            src="Galerie/AvantApresOrthodontie (2).jpg"
+            alt="Orthodontie - Cas 2"
+            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            onerror="this.style.display='none'"
+          />
+          <div
+            class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+          >
+            <span
+              class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg"
+              >Orthodontie - Cas 2</span
+            >
+          </div>
+        </div>
+
+        <!-- AvantApresOrthodontie (3) -->
+        <div
+          class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img"
+          tabindex="0"
+          data-img="Galerie/AvantApresOrthodontie (3).jpg"
+          data-caption="Orthodontie - Cas 3"
+        >
+          <img
+            src="Galerie/AvantApresOrthodontie (3).jpg"
+            alt="Orthodontie - Cas 3"
+            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            onerror="this.style.display='none'"
+          />
+          <div
+            class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+          >
+            <span
+              class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg"
+              >Orthodontie - Cas 3</span
+            >
+          </div>
+        </div>
+
+        <!-- AvantApresOrthodontie (4) -->
+        <div
+          class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img"
+          tabindex="0"
+          data-img="Galerie/AvantApresOrthodontie (4).jpg"
+          data-caption="Orthodontie - Cas 4"
+        >
+          <img
+            src="Galerie/AvantApresOrthodontie (4).jpg"
+            alt="Orthodontie - Cas 4"
+            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            onerror="this.style.display='none'"
+          />
+          <div
+            class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+          >
+            <span
+              class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg"
+              >Orthodontie - Cas 4</span
+            >
+          </div>
+        </div>
+
+        <!-- AvantApresProthese -->
+        <div
+          class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img"
+          tabindex="0"
+          data-img="Galerie/AvantApresProthese.jpg"
+          data-caption="Prothèse dentaire"
+        >
+          <img
+            src="Galerie/AvantApresProthese.jpg"
+            alt="Prothèse dentaire"
+            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            onerror="this.style.display='none'"
+          />
+          <div
+            class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+          >
+            <span
+              class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg"
+              >Prothèse dentaire</span
+            >
+          </div>
+        </div>
+
+        <!-- AvantApresProthese (2) -->
+        <div
+          class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img"
+          tabindex="0"
+          data-img="Galerie/AvantApresProthese (2).jpg"
+          data-caption="Prothèse dentaire - Cas 2"
+        >
+          <img
+            src="Galerie/AvantApresProthese (2).jpg"
+            alt="Prothèse dentaire - Cas 2"
+            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            onerror="this.style.display='none'"
+          />
+          <div
+            class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+          >
+            <span
+              class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg"
+              >Prothèse dentaire - Cas 2</span
+            >
+          </div>
+        </div>
+
+        <!-- AvantApresProthese (3) -->
+        <div
+          class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img"
+          tabindex="0"
+          data-img="Galerie/AvantApresProthese (3).jpg"
+          data-caption="Prothèse dentaire - Cas 3"
+        >
+          <img
+            src="Galerie/AvantApresProthese (3).jpg"
+            alt="Prothèse dentaire - Cas 3"
+            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            onerror="this.style.display='none'"
+          />
+          <div
+            class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+          >
+            <span
+              class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg"
+              >Prothèse dentaire - Cas 3</span
+            >
+          </div>
+        </div>
+
+        <!-- AvantApresProthese (4) -->
+        <div
+          class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img"
+          tabindex="0"
+          data-img="Galerie/AvantApresProthese (4).jpg"
+          data-caption="Prothèse dentaire - Cas 4"
+        >
+          <img
+            src="Galerie/AvantApresProthese (4).jpg"
+            alt="Prothèse dentaire - Cas 4"
+            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            onerror="this.style.display='none'"
+          />
+          <div
+            class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+          >
+            <span
+              class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg"
+              >Prothèse dentaire - Cas 4</span
+            >
+          </div>
+        </div>
+
+        <!-- AvantApresProthese (5) -->
+        <div
+          class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img"
+          tabindex="0"
+          data-img="Galerie/AvantApresProthese (5).jpg"
+          data-caption="Prothèse dentaire - Cas 5"
+        >
+          <img
+            src="Galerie/AvantApresProthese (5).jpg"
+            alt="Prothèse dentaire - Cas 5"
+            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            onerror="this.style.display='none'"
+          />
+          <div
+            class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+          >
+            <span
+              class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg"
+              >Prothèse dentaire - Cas 5</span
+            >
+          </div>
+        </div>
+
+        <!-- AvantApresProthese (6) -->
+        <div
+          class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img"
+          tabindex="0"
+          data-img="Galerie/AvantApresProthese (6).jpg"
+          data-caption="Prothèse dentaire - Cas 6"
+        >
+          <img
+            src="Galerie/AvantApresProthese (6).jpg"
+            alt="Prothèse dentaire - Cas 6"
+            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            onerror="this.style.display='none'"
+          />
+          <div
+            class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+          >
+            <span
+              class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg"
+              >Prothèse dentaire - Cas 6</span
+            >
+          </div>
+        </div>
+
+        <!-- AvantApresProtheseDentaire -->
+        <div
+          class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition group relative cursor-pointer gallery-img"
+          tabindex="0"
+          data-img="Galerie/AvantApresProtheseDentaire.jpg"
+          data-caption="Prothèse dentaire complète"
+        >
+          <img
+            src="Galerie/AvantApresProtheseDentaire.jpg"
+            alt="Prothèse dentaire complète"
+            class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            onerror="this.style.display='none'"
+          />
+          <div
+            class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+          >
+            <span
+              class="absolute left-0 bottom-0 mb-3 ml-3 bg-magenta/90 text-white text-sm font-medium px-3 py-1 rounded-tl-lg rounded-br-lg shadow-lg"
+              >Prothèse dentaire complète</span
+            >
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Ligne de séparation -->
-      <div class="border-t border-white/20 pt-6">
-        <div class="text-center text-sm opacity-80">
-          © 2025 Cabinet Dentaire Mek’s. Tous droits réservés.
+    <!-- Section Avant/Après -->
+    <section
+      id="before-after-content"
+      class="container mx-auto px-4 py-8 hidden"
+    >
+      <div class="text-center mb-12" data-aos="fade-up">
+        <h2 class="text-3xl md:text-4xl font-bold text-azur mb-4">
+          Transformations Avant/Après
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Découvrez les résultats exceptionnels de nos traitements dentaires
+        </p>
+      </div>
+
+      <!-- Grille des transformations -->
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        data-aos="fade-up"
+      >
+        <!-- Blanchiment dentaire -->
+        <div
+          class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group"
+        >
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-azur mb-4 text-center">
+              Blanchiment Dentaire
+            </h3>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="relative group/item">
+                <img
+                  src="Galerie/AvantBlanchimentDentaire.JPG"
+                  alt="Avant blanchiment dentaire"
+                  class="w-full h-48 object-cover rounded-lg group-hover/item:scale-105 transition-transform duration-300"
+                  onerror="this.style.display='none'"
+                />
+                <div
+                  class="absolute inset-0 bg-black/40 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center"
+                >
+                  <span
+                    class="bg-magenta text-white px-3 py-1 rounded-lg text-sm font-medium"
+                    >Avant traitement</span
+                  >
+                </div>
+              </div>
+              <div class="relative group/item">
+                <img
+                  src="Galerie/ApresBlanchimentDentaire.JPG"
+                  alt="Après blanchiment dentaire"
+                  class="w-full h-48 object-cover rounded-lg group-hover/item:scale-105 transition-transform duration-300"
+                  onerror="this.style.display='none'"
+                />
+                <div
+                  class="absolute inset-0 bg-black/40 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center"
+                >
+                  <span
+                    class="bg-green-500 text-white px-3 py-1 rounded-lg text-sm font-medium"
+                    >Après traitement</span
+                  >
+                </div>
+              </div>
+            </div>
+            <p class="text-sm text-gray-600 mt-4 text-center">
+              Transformation éclatante du sourire par blanchiment professionnel
+            </p>
+          </div>
+        </div>
+
+        <!-- Prothèse dentaire -->
+        <div
+          class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group"
+        >
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-azur mb-4 text-center">
+              Prothèse Dentaire
+            </h3>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="relative group/item">
+                <img
+                  src="Galerie/AvantProtheseDentaire.JPG"
+                  alt="Avant prothèse dentaire"
+                  class="w-full h-48 object-cover rounded-lg group-hover/item:scale-105 transition-transform duration-300"
+                  onerror="this.style.display='none'"
+                />
+                <div
+                  class="absolute inset-0 bg-black/40 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center"
+                >
+                  <span
+                    class="bg-magenta text-white px-3 py-1 rounded-lg text-sm font-medium"
+                    >Avant traitement</span
+                  >
+                </div>
+              </div>
+              <div class="relative group/item">
+                <img
+                  src="Galerie/ApresProtheseDentaire.JPG"
+                  alt="Après prothèse dentaire"
+                  class="w-full h-48 object-cover rounded-lg group-hover/item:scale-105 transition-transform duration-300"
+                  onerror="this.style.display='none'"
+                />
+                <div
+                  class="absolute inset-0 bg-black/40 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center"
+                >
+                  <span
+                    class="bg-green-500 text-white px-3 py-1 rounded-lg text-sm font-medium"
+                    >Après traitement</span
+                  >
+                </div>
+              </div>
+            </div>
+            <p class="text-sm text-gray-600 mt-4 text-center">
+              Restauration complète avec prothèse dentaire personnalisée
+            </p>
+          </div>
+        </div>
+
+        <!-- Prothèse dentaire dessus -->
+        <div
+          class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group"
+        >
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-azur mb-4 text-center">
+              Prothèse Supérieure
+            </h3>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="relative group/item">
+                <img
+                  src="Galerie/AvantProtheseDentaireDessus2.JPG"
+                  alt="Avant prothèse supérieure"
+                  class="w-full h-48 object-cover rounded-lg group-hover/item:scale-105 transition-transform duration-300"
+                  onerror="this.style.display='none'"
+                />
+                <div
+                  class="absolute inset-0 bg-black/40 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center"
+                >
+                  <span
+                    class="bg-magenta text-white px-3 py-1 rounded-lg text-sm font-medium"
+                    >Avant traitement</span
+                  >
+                </div>
+              </div>
+              <div class="relative group/item">
+                <img
+                  src="Galerie/ApresProtheseDentaireDessus2.JPG"
+                  alt="Après prothèse supérieure"
+                  class="w-full h-48 object-cover rounded-lg group-hover/item:scale-105 transition-transform duration-300"
+                  onerror="this.style.display='none'"
+                />
+                <div
+                  class="absolute inset-0 bg-black/40 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center"
+                >
+                  <span
+                    class="bg-green-500 text-white px-3 py-1 rounded-lg text-sm font-medium"
+                    >Après traitement</span
+                  >
+                </div>
+              </div>
+            </div>
+            <p class="text-sm text-gray-600 mt-4 text-center">
+              Prothèse supérieure parfaitement adaptée et esthétique
+            </p>
+          </div>
+        </div>
+
+        <!-- Prothèse dentaire femme -->
+        <div
+          class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group"
+        >
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-azur mb-4 text-center">
+              Prothèse Féminine
+            </h3>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="relative group/item">
+                <img
+                  src="Galerie/AvantProtheseDentaireFemme.jpg"
+                  alt="Avant prothèse dentaire femme"
+                  class="w-full h-48 object-cover rounded-lg group-hover/item:scale-105 transition-transform duration-300"
+                  onerror="this.style.display='none'"
+                />
+                <div
+                  class="absolute inset-0 bg-black/40 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center"
+                >
+                  <span
+                    class="bg-magenta text-white px-3 py-1 rounded-lg text-sm font-medium"
+                    >Avant traitement</span
+                  >
+                </div>
+              </div>
+              <div class="relative group/item">
+                <img
+                  src="Galerie/ApresProtheseDentaireFemme.jpg"
+                  alt="Après prothèse dentaire femme"
+                  class="w-full h-48 object-cover rounded-lg group-hover/item:scale-105 transition-transform duration-300"
+                  onerror="this.style.display='none'"
+                />
+                <div
+                  class="absolute inset-0 bg-black/40 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center"
+                >
+                  <span
+                    class="bg-green-500 text-white px-3 py-1 rounded-lg text-sm font-medium"
+                    >Après traitement</span
+                  >
+                </div>
+              </div>
+            </div>
+            <p class="text-sm text-gray-600 mt-4 text-center">
+              Prothèse dentaire adaptée aux besoins personnels du patient
+            </p>
+          </div>
+        </div>
+
+        <!-- Blanchiment orthodontie -->
+        <div
+          class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group"
+        >
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-azur mb-4 text-center">
+              Blanchiment + Orthodontie
+            </h3>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="relative group/item">
+                <img
+                  src="Galerie/AvantApresBlanchimentOrthodonthie.jpg"
+                  alt="Avant blanchiment orthodontie"
+                  class="w-full h-48 object-cover rounded-lg group-hover/item:scale-105 transition-transform duration-300"
+                  onerror="this.style.display='none'"
+                />
+                <div
+                  class="absolute inset-0 bg-black/40 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center"
+                >
+                  <span
+                    class="bg-magenta text-white px-3 py-1 rounded-lg text-sm font-medium"
+                    >Avant traitement</span
+                  >
+                </div>
+              </div>
+              <div class="relative group/item">
+                <img
+                  src="Galerie/AvantApresBlanchimentOrthodonthie.jpg"
+                  alt="Après blanchiment orthodontie"
+                  class="w-full h-48 object-cover rounded-lg group-hover/item:scale-105 transition-transform duration-300"
+                  onerror="this.style.display='none'"
+                />
+                <div
+                  class="absolute inset-0 bg-black/40 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center"
+                >
+                  <span
+                    class="bg-green-500 text-white px-3 py-1 rounded-lg text-sm font-medium"
+                    >Après traitement</span
+                  >
+                </div>
+              </div>
+            </div>
+            <p class="text-sm text-gray-600 mt-4 text-center">
+              Traitement combiné orthodontie et blanchiment
+            </p>
+          </div>
+        </div>
+
+        <!-- Construction dentaire -->
+        <div
+          class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group"
+        >
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-azur mb-4 text-center">
+              Construction Dentaire
+            </h3>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="relative group/item">
+                <img
+                  src="Galerie/AvantApresConstruction.jpg"
+                  alt="Avant construction dentaire"
+                  class="w-full h-48 object-cover rounded-lg group-hover/item:scale-105 transition-transform duration-300"
+                  onerror="this.style.display='none'"
+                />
+                <div
+                  class="absolute inset-0 bg-black/40 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center"
+                >
+                  <span
+                    class="bg-magenta text-white px-3 py-1 rounded-lg text-sm font-medium"
+                    >Avant traitement</span
+                  >
+                </div>
+              </div>
+              <div class="relative group/item">
+                <img
+                  src="Galerie/AvantApresConstruction.jpg"
+                  alt="Après construction dentaire"
+                  class="w-full h-48 object-cover rounded-lg group-hover/item:scale-105 transition-transform duration-300"
+                  onerror="this.style.display='none'"
+                />
+                <div
+                  class="absolute inset-0 bg-black/40 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center"
+                >
+                  <span
+                    class="bg-green-500 text-white px-3 py-1 rounded-lg text-sm font-medium"
+                    >Après traitement</span
+                  >
+                </div>
+              </div>
+            </div>
+            <p class="text-sm text-gray-600 mt-4 text-center">
+              Reconstruction dentaire complète et durable
+            </p>
+          </div>
+        </div>
+
+        <!-- Détartrage -->
+        <div
+          class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group"
+        >
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-azur mb-4 text-center">
+              Détartrage
+            </h3>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="relative group/item">
+                <img
+                  src="Galerie/AvantApresDetatrage.jpg"
+                  alt="Avant détartrage"
+                  class="w-full h-48 object-cover rounded-lg group-hover/item:scale-105 transition-transform duration-300"
+                  onerror="this.style.display='none'"
+                />
+                <div
+                  class="absolute inset-0 bg-black/40 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center"
+                >
+                  <span
+                    class="bg-magenta text-white px-3 py-1 rounded-lg text-sm font-medium"
+                    >Avant traitement</span
+                  >
+                </div>
+              </div>
+              <div class="relative group/item">
+                <img
+                  src="Galerie/AvantApresDetatrage.jpg"
+                  alt="Après détartrage"
+                  class="w-full h-48 object-cover rounded-lg group-hover/item:scale-105 transition-transform duration-300"
+                  onerror="this.style.display='none'"
+                />
+                <div
+                  class="absolute inset-0 bg-black/40 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center"
+                >
+                  <span
+                    class="bg-green-500 text-white px-3 py-1 rounded-lg text-sm font-medium"
+                    >Après traitement</span
+                  >
+                </div>
+              </div>
+            </div>
+            <p class="text-sm text-gray-600 mt-4 text-center">
+              Nettoyage professionnel et élimination du tartre
+            </p>
+          </div>
+        </div>
+
+        <!-- Orthodontie -->
+        <div
+          class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group"
+        >
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-azur mb-4 text-center">
+              Orthodontie
+            </h3>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="relative group/item">
+                <img
+                  src="Galerie/AvantApresOrthodontie.jpg"
+                  alt="Avant orthodontie"
+                  class="w-full h-48 object-cover rounded-lg group-hover/item:scale-105 transition-transform duration-300"
+                  onerror="this.style.display='none'"
+                />
+                <div
+                  class="absolute inset-0 bg-black/40 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center"
+                >
+                  <span
+                    class="bg-magenta text-white px-3 py-1 rounded-lg text-sm font-medium"
+                    >Avant traitement</span
+                  >
+                </div>
+              </div>
+              <div class="relative group/item">
+                <img
+                  src="Galerie/AvantApresOrthodontie.jpg"
+                  alt="Après orthodontie"
+                  class="w-full h-48 object-cover rounded-lg group-hover/item:scale-105 transition-transform duration-300"
+                  onerror="this.style.display='none'"
+                />
+                <div
+                  class="absolute inset-0 bg-black/40 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center"
+                >
+                  <span
+                    class="bg-green-500 text-white px-3 py-1 rounded-lg text-sm font-medium"
+                    >Après traitement</span
+                  >
+                </div>
+              </div>
+            </div>
+            <p class="text-sm text-gray-600 mt-4 text-center">
+              Correction de l'alignement dentaire par orthodontie
+            </p>
+          </div>
+        </div>
+
+        <!-- Prothèse dentaire générale -->
+        <div
+          class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group"
+        >
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-azur mb-4 text-center">
+              Prothèse Générale
+            </h3>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="relative group/item">
+                <img
+                  src="Galerie/AvantApresProthese.jpg"
+                  alt="Avant prothèse générale"
+                  class="w-full h-48 object-cover rounded-lg group-hover/item:scale-105 transition-transform duration-300"
+                  onerror="this.style.display='none'"
+                />
+                <div
+                  class="absolute inset-0 bg-black/40 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center"
+                >
+                  <span
+                    class="bg-magenta text-white px-3 py-1 rounded-lg text-sm font-medium"
+                    >Avant traitement</span
+                  >
+                </div>
+              </div>
+              <div class="relative group/item">
+                <img
+                  src="Galerie/AvantApresProthese.jpg"
+                  alt="Après prothèse générale"
+                  class="w-full h-48 object-cover rounded-lg group-hover/item:scale-105 transition-transform duration-300"
+                  onerror="this.style.display='none'"
+                />
+                <div
+                  class="absolute inset-0 bg-black/40 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center"
+                >
+                  <span
+                    class="bg-green-500 text-white px-3 py-1 rounded-lg text-sm font-medium"
+                    >Après traitement</span
+                  >
+                </div>
+              </div>
+            </div>
+            <p class="text-sm text-gray-600 mt-4 text-center">
+              Restauration complète avec prothèse dentaire
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </section>
 
-  <!-- JS LIBS & MAIN.JS -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
-  <script src="main.js" defer></script>
-</body>
+    <!-- CTA Section stylisée -->
+    <section
+      class="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden"
+      data-aos="fade-up"
+    >
+      <!-- Formes décoratives en arrière-plan -->
+      <div class="absolute inset-0 pointer-events-none">
+        <div
+          class="absolute top-20 right-20 w-40 h-40 bg-magenta/5 rounded-full animate-pulse"
+        ></div>
+        <div
+          class="absolute bottom-16 left-16 w-32 h-32 bg-azur/5 rounded-full animate-pulse"
+          style="animation-delay: 2s"
+        ></div>
+        <div
+          class="absolute top-1/2 left-1/3 w-24 h-24 bg-green-500/5 rounded-full animate-pulse"
+          style="animation-delay: 1s"
+        ></div>
+      </div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <!-- CTA stylisé -->
+        <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+          <div
+            class="bg-gradient-to-r from-magenta/5 via-azur/5 to-magenta/5 rounded-3xl p-8 max-w-4xl mx-auto border border-magenta/10"
+          >
+            <h3 class="text-2xl md:text-3xl font-bold text-azur mb-4">
+              Prêt à prendre soin de votre sourire ?
+            </h3>
+            <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+              Notre équipe vous accueille à Douala et Yaoundé pour des soins
+              personnalisés et rassurants. Découvrez pourquoi des milliers de
+              patients nous font confiance.
+            </p>
+            <a
+              href="contact.html"
+              class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-magenta to-azur text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+            >
+              <i class="fa-solid fa-calendar-check mr-2"></i>
+              <span>Prendre rendez-vous</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-mauve text-white py-12 mt-16" data-aos="fade-up">
+      <div class="max-w-6xl mx-auto px-4">
+        <!-- Section principale du footer -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <!-- Informations du cabinet -->
+          <div class="flex flex-col items-start">
+            <div class="flex items-center mb-4">
+              <img
+                src="Galerie/Logo.png"
+                alt="Logo Cabinet Dentaire Mek’s"
+                class="h-12 w-12 mr-3"
+              />
+              <div>
+                <div class="font-bold text-2xl">Cabinet Dentaire Mek’s</div>
+                <div class="text-sm opacity-90">Douala & Yaoundé</div>
+              </div>
+            </div>
+            <p class="text-sm opacity-90 leading-relaxed font-semibold">
+              La référence pour un sourire de rêve
+            </p>
+          </div>
+
+          <!-- Liens rapides -->
+          <div>
+            <div class="font-semibold text-lg mb-4">Liens rapides</div>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="index.html"
+                  class="hover:text-magenta transition-colors duration-300"
+                  >Accueil</a
+                >
+              </li>
+              <li>
+                <a
+                  href="a-propos.html"
+                  class="hover:text-magenta transition-colors duration-300"
+                  >À propos</a
+                >
+              </li>
+              <li>
+                <a
+                  href="nos-services.html"
+                  class="hover:text-magenta transition-colors duration-300"
+                  >Nos services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="hover:text-magenta transition-colors duration-300"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a
+                  href="gallery.html"
+                  class="hover:text-magenta transition-colors duration-300"
+                  >Galerie</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contacts -->
+          <div>
+            <div class="font-semibold text-lg mb-4">Contacts</div>
+            <div class="space-y-3">
+              <div class="flex items-center">
+                <i class="far fa-envelope w-5 mr-3 text-magenta"></i>
+                <a
+                  href="mailto:Mvotowini@gmail.com"
+                  class="text-sm hover:text-magenta"
+                  >Mvotowini@gmail.com</a
+                >
+              </div>
+              <div class="flex items-center">
+                <i class="fab fa-whatsapp w-5 mr-3 text-magenta"></i>
+                <a
+                  href="https://wa.me/237691560410"
+                  class="text-sm hover:text-magenta"
+                  >+237 6 91 56 04 10</a
+                >
+              </div>
+              <div class="flex items-center">
+                <i class="fab fa-facebook w-5 mr-3 text-magenta"></i>
+                <a
+                  href="https://www.facebook.com/share/198eCfK1wM/?mibextid=wwXIfr"
+                  target="_blank"
+                  class="text-sm hover:text-magenta"
+                  >Facebook /CabinetMeks</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Horaires -->
+          <div>
+            <div class="font-semibold text-lg mb-4">Horaires</div>
+            <div class="space-y-3">
+              <div>
+                <div class="text-sm opacity-90">Lundi - Vendredi</div>
+                <div class="font-semibold">8h - 18h</div>
+              </div>
+              <div>
+                <div class="text-sm opacity-90">Samedi</div>
+                <div class="font-semibold">8h - 14h</div>
+              </div>
+              <div>
+                <div class="text-sm opacity-90">Dimanche</div>
+                <div class="font-semibold">Fermé</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ligne de séparation -->
+        <div class="border-t border-white/20 pt-6">
+          <div class="text-center text-sm opacity-80">
+            © 2025 Cabinet Dentaire Mek’s. Tous droits réservés.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS LIBS & MAIN.JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"
+      defer
+    ></script>
+    <script src="main.js" defer></script>
+  </body>
 </html>
