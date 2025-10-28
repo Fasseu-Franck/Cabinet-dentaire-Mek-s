@@ -33,28 +33,10 @@ function initMobileMenu() {
 function initContactForm() {
   const contactForm = document.getElementById("contact-form");
 
+  // Désactivation de la validation/envoi via JS pour laisser la soumission native
+  // Aucun écouteur 'submit' n'est attaché afin de ne pas intercepter l'envoi
   if (contactForm) {
-    contactForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      // Récupération des données du formulaire
-      const formData = new FormData(this);
-      const data = Object.fromEntries(formData);
-
-      // Validation des champs
-      if (!validateForm(data)) {
-        return;
-      }
-
-      // Simulation d'envoi avec animation
-      showLoadingState();
-
-      setTimeout(() => {
-        hideLoadingState();
-        showSuccessMessage();
-        contactForm.reset();
-      }, 2000);
-    });
+    return;
   }
 }
 
